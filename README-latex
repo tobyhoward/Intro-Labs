@@ -11,6 +11,9 @@ in a directory where LaTeX will find them.
 On a Mac a good place is in ~/Library/texmf/tex/latex
 On Linux it's ~/texmf/tex/latex
 
+Some additional style files are needed before the makefile will run successfully. 
+These are collated for you in the texmf folder, just copy this to your home directory and it should work.
+
 You also need an up to date version of texlive (we have used the 2013 distribution)
 
 Note: If you are using TexLive 2014, you may need to remove or rename the file

@@ -20,7 +20,7 @@
 
 If all went well in the last lab session, your Pi should be ready for use, but if you did not complete the Raspbian configuration, please go back to the Welcome Lab 0 notes and finish it now.
 
-In this session we are going to complete the setup of your Raspberry Pi and explore some of its capabilities. Please connect your Pi as you did in the previous lab -- do not connect it to the network yet.
+In this session we are going to complete the setup of your Raspberry Pi and explore some of its capabilities. Please connect your Pi as you did in the previous lab, including the network cable.
 
 At the login line enter \totype{pi} as the username, and when prompted for the password, type \totype{raspberry}. \textbf{Note that, so that anyone standing behind you cannot even see the length of your password,  the username will appear on screen as you type it, but the password will not} (so make sure you're typing carefully!). Not echoing anything during password typing is fairly universal in Unix systems.
 
@@ -73,6 +73,8 @@ You can change this prompt to something more or less verbose later, but for now 
 
 \noindent means `type \totype{echo Hello World} at the command prompt and then press Enter' (you can do this if you like; the result will be that `Hello World' gets `echoed' \cmnd{echo}{} back to you on the next line of the screen). (Notice that this reference to a Unix command has caused a small cog to appear in the right hand margin, so you can find this reference easily later. If you are reading the notes online, the cog also contains a link to a web page describing some Unix commands.)
 
+\begin{comment} 
+
 Before we do any real work on the Pi, we should make it a bit more secure than it currently is. Remember, you've logged in using the default username `pi' and the default password `raspberry', so anybody else could do the same; so this is the time to change the password to something that's unique.
 
 For webcomic XKCD's view on creating good passwords, see Figure \ref{figure:xkcd-password}.
@@ -110,6 +112,10 @@ Although the Pi uses a fairly standard Unix operating system, it's probably not 
 
 Now that your password isn't the same as the `out of the box' Pi one, it's safe to plug your Pi into the network. You will need to refer to a couple of the illustrations of the Pi that were in Intro lab 0. Locate the blue ethernet cable poking out of the desk (labelled \protect\circled{4} on Figure~\ref{figure:cables}) on page~\pageref{figure:cables}; plug that into the appropriate socket on your Pi (number \circled{8} on Figure~\ref{figure:bare-rpi}, page~\pageref{figure:bare-rpi}). To confirm that you're now connected to the network, use the \cmnd{ping}{ping} command, which sends a low-level network message to a designated place and checks for a response, to see if you can reach our School's web server. Don't worry about the \ttout{sudo} part, we'll explain that later in the lab. You will be prompted for your password here, again don't worry about this for the moment.
 
+\end{comment}
+
+To confirm that you're now connected to the network, use the \cmnd{ping}{ping} command, which sends a low-level network message to a designated place and checks for a response, to see if you can reach our School's web server. Don't worry about the \ttout{sudo} part, we'll explain that later in the lab. You will be prompted for your password here, again don't worry about this for the moment.
+
 \begin{ttoutenv}
  \small
 $ sudo ping www.cs.manchester.ac.uk
@@ -121,7 +127,9 @@ PING cmpsci.eps.its.man.ac.uk (130.88.98.241) 56(84) bytes of data.
 
 % $
 
-Each of the lines starting with `\ttout{64 bytes}' represents a short response from the machine you've just pinged, and you're shown the round-trip time for ping's data to leave your Pi, find (in this case) \url{www.cs.manchester.ac.uk} on the network, and return back to your Pi. Since we're just using ping here to give us some confidence that the network is okay, we don't need to leave it pinging away for ages, so let's stop the ping command in its tracks. Hold down the control key (marked `ctrl' on the keyboard), and press `c'. This will signal the currently executing command that it should stop what its doing and return to the command prompt (quite often this is referred to as ``control-c-ing'' a command, and it will have the same effect on the majority of command-line tools). This key combination is often written \ctrl{c}. \textbf{If you see this notation in these notes, don't type the individual characters, press the key marked ctrl and the appropriate letter key}.
+Each of the lines starting with `\ttout{64 bytes}' represents a short response from the machine you've just pinged, and you're shown the round-trip time for ping's data to leave your Pi, find (in this case) \url{www.cs.manchester.ac.uk} on the network, and return back to your Pi.  Since we're just using ping here to give us some confidence that the network is okay, we don't need to leave it pinging away for ages, so let's stop the ping command in its tracks. Hold down the control key (marked `ctrl' on the keyboard), and press `c'. This will signal the currently executing command that it should stop what its doing and return to the command prompt (quite often this is referred to as ``control-c-ing'' a command, and it will have the same effect on the majority of command-line tools). This key combination is often written \ctrl{c}. \textbf{If you see this notation in these notes, don't type the individual characters, press the key marked ctrl and the appropriate letter key}.
+
+The readout from the ping command is important - you should check which machine exactly is responding to your pings. If your network is configured correctly you should find that the output from the ping command looks similar to the one here, including the domain name \urlnop{eps.its.man.ac.uk} and the IP address \urlnop{130.88.98.241}. You shouldn't worry about subtle differences such as the time, but if the IP address looks much different to this (for example, if it is \urlnop{10.2.232.254}) then you likely failed the registration from Intro Lab 0 and should return to complete that step.
 
 \begin{diversion}{Ping}
   The \ttout{ping} command is named after its use in the field of active sonar, where an actual `ping' sound was sent through water, and distance calculated by listening for the echo to return. It's the classic boingy pingy noise associated with submarine movies!
