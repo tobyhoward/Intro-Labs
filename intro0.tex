@@ -238,7 +238,7 @@ In this lab session we start the process of setting up the  Raspberry Pi and con
 
 The most remarkable thing about the Pi is that, although it's not the most powerful of computers, it is capable of running the same full \wikipedia{Linux}{Linux} operating system as the machines that you'll be using in the labs for the duration of your studies, and which you'll undoubtedly encounter in your future careers. We're actually going to be using slightly different flavours of Linux on the Pi and the lab machines, but the differences are fairly minor---more on that later. Let's get started.
 
-The Raspberry Pi itself is just the circuit board shown from the top in Figure \ref{figure:bare-rpi}. Your kit contains a Pi together with a case, SD card and power supply. If you want to replace the case with one in a different style you're welcome to do so (there are plenty available to buy online, and lots of people have made their own unique ones just for the fun of it). If you do put it in your own case, please remember to transfer the `sequence number' sticker we've placed on the original box to the new box so that if the Pi is left behind in the lab it can be returned to you (this number is also labelled on the ethernet port). The Pi is reasonably robust, and you can use it without a case, but obviously it's a bit more vulnerable if it's not in a box of some sort. Figure \ref{figure:bare-rpi-underside} shows the Pi's circuit board from beneath, indicating where the micro SD card gets inserted.
+The Raspberry Pi itself is just the circuit board shown from the top in Figure \ref{figure:bare-rpi}. Your kit contains a Pi together with a case, SD card and power supply. If you want to replace the case with one in a different style you're welcome to do so (there are plenty available to buy online, and lots of people have made their own unique ones just for the fun of it). The Pi is reasonably robust, and you can use it without a case, but obviously it's a bit more vulnerable if it's not in a box of some sort. Figure \ref{figure:bare-rpi-underside} shows the Pi's circuit board from beneath, indicating where the micro SD card gets inserted.
 
 \begin{rpi}{Why is it called a Pi?}
   The Raspberry Pi apparently got its name because (a) lots of other computer systems have been named after fruit (you'll know of Apple and Blackberry, but in the past there has also been at least Apricot and Tangerine), and (b) the \wikipedia{Python_(programming_language)}{Python language} was one of the first things ported to run on it. The logo was created by Paul Beech, and is based on \wikipedia{Buckminsterfullerene}{Buckminsterfullerene}, a spherical fullerene molecule more commonly called a Buckyball. Its designer pointed out that a full buckyball has 32 faces, but that only 11 are visible in the 2D logo; and that the Raspberry Pi has a 32-bit processor and an ARM11 on board.
@@ -252,7 +252,7 @@ The ARM processor, on which the Pi and the vast majority of the world's other mo
 
 \begin{figure}
 \centerline{\includegraphics[width=15cm]{images/rpi2-front}}
-\caption{An uncased Raspberry Pi 2. The numbered connectors are \protect\circled{1} HDMI output,  \protect\circled{2} four USB ports,  \protect\circled{4} micro-USB power input,  \protect\circled{5} a red power LED and a green `activity' LED,  \protect\circled{6} stereo audio out,  \protect\circled{7} General Purpose Input/Output (GPIO),  \protect\circled{8} Ethernet.}\label{figure:bare-rpi}
+\caption{An uncased Raspberry Pi 2. The numbered connectors are \protect\circled{1} HDMI output,  \protect\circled{2} four USB ports,  \protect\circled{4} micro-USB power input,  \protect\circled{6} stereo audio out,  \protect\circled{7} General Purpose Input/Output (GPIO),  \protect\circled{8} Ethernet.}\label{figure:bare-rpi}
 \end{figure}
 
 \begin{figure}
@@ -415,8 +415,33 @@ then press Return. This will bring up another configuration
 screen. This time use the arrow keys to select the option `Text
 console, requiring user to login'. Again use Tab until
 \verb+<OK>+ is highlighted, then press Return. You should now be
-back at the previous configuration screen where you should Tab to
-select \verb+<Finish>+ then press Return. You should now see a screen asking `Would you like to reboot?'. Tab to \verb+<No>+ then press return.
+back at the previous configuration screen. This time use the arrow keys to select `Change User Password` and press Return.
+You'll see another message, but just select \verb+<OK>+ with the Return key to get to the password entry screen.
+Don't worry about the password you're typing not appearing on the screen - that's normal! 
+Select \verb+<OK>+ if the password is changed successfully, and ignore this window for now.
+
+\begin{danger}{Don't forget your password}
+It is very important that you do not forget this password; there's no easy way to get back into your Pi without resetting everything.
+\end{danger}
+
+\begin{danger}{Memory Loss}
+Although the Pi uses a fairly standard Unix operating system, it's probably not quite as secure as a normal desktop machine because of its small size and easily-removable storage media. Once the Pi has booted from the SD card, it's about as secure as any other Linux machine, but because the memory card is easily removable, it can trivially be connected to another machine as a `removable media' device; and at that point the host machine can almost certainly see its contents, including any of the files you've created, because the filesystem itself isn't encrypted. And because the Pi is small and portable, it's easier to lose it than a laptop or desktop machine; so, be careful!
+\end{danger}
+
+
+\section{Network Registration}
+
+The Raspberry Pi network here is separated from the main network and the internet, and you will be unable to access other networks until you register your Pi.
+Now that your password isn't the same as the `out of the box' Pi one, it's safe to plug your Pi into the network. Locate the blue ethernet cable poking out of the desk (labelled \protect\circled{4} on Figure~\ref{figure:cables}) on page~\pageref{figure:cables}; plug that into the appropriate socket on your Pi (number \circled{8} on Figure~\ref{figure:bare-rpi}, page~\pageref{figure:bare-rpi}).
+Click the globe icon in the panel at the upper left of the screen. The web browser should appear. Type any URL into the address bar and press enter - you should be redirected to the registration page.
+Simply enter the login details you use for MyManchester and click accept. If you register successfully, you should be told to shutdown your Pi. First, switch back to the command line window.
+
+\begin{figure}
+\centerline{\includegraphics[width=13cm]{images/NetReg.png}}
+\caption{The NetReg registration page.} \label{figure:netreg}
+\end{figure}
+
+Use the tab button to select \verb+<Finish>+ then press Return. You should now see a screen asking `Would you like to reboot?'. Tab to \verb+<No>+ then press return.
 
 You should now be back in the command line Terminal, where you can stop the Pi by typing
 %$
