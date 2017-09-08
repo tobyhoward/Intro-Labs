@@ -38,7 +38,7 @@ In this lab session we're going to explore some of the features of Unix in a bit
 
 \section{Reading email in terminal mode}
 
-You're probably familiar with reading email using either a web-based interface, a graphical desktop application (such as Outlook, Thunderbird or OS X Mail) or using an app on a smartphone or tablet. Today you're going to do something slightly different, and configure a text-based mail client so that you can read your University email while using a terminal. The email client we're going to use is called \cmnd{mutt}{Mutt}, which is fairly simple to configure and straightforward to use (according to its author, Michael Elkins, ``All mail clients suck. This one just sucks less''). There are plenty of other similarly lean text-based \wikipedia{List_of_email_clients}{email clients}, and you may at some point want to check out \ttout{Alpine} as a sensible alternative to \cmnd{mutt}{Mutt} or for the historically-curious, \ttout{Elm} (if you want a \textit{really} hardcore terminal-mode experience of mail, look up \wikipedia{Mailx}{Mailx}).
+You're probably familiar with reading email using either a web-based interface, a graphical desktop application (such as Outlook, Thunderbird or Mac Mail) or using an app on a smartphone or tablet. Today you're going to do something slightly different, and configure a text-based mail client so that you can read your University email while using a terminal. The email client we're going to use is called \cmnd{mutt}{Mutt}, which is fairly simple to configure and straightforward to use (according to its author, Michael Elkins, ``All mail clients suck. This one just sucks less''). There are plenty of other similarly lean text-based \wikipedia{List_of_email_clients}{email clients}, and you may at some point want to check out \ttout{Alpine} as a sensible alternative to \cmnd{mutt}{Mutt} or for the historically-curious, \ttout{Elm} (if you want a \textit{really} hardcore terminal-mode experience of mail, look up \wikipedia{Mailx}{Mailx}).
 
 First, let's confirm that \cmnd{mutt}{Mutt} is actually installed.
 
@@ -95,7 +95,7 @@ Back to configuring your email client. Before we use \cmnd{mutt}{mutt}, we need 
 
 \begin{diversion}{File extensions}
 \label{diversion:file-extensions}
-If you've mostly used Windows or OS X via a GUI, then you're probably used to files such as \fname{cheese.jpg}, where you would interpret \fname{cheese} as being the file \textit{name} and \textit{jpg} as being the file \textit{extension}. Some operating systems---notably Windows---have the notion of a \wikipedia{Filename_extension}{filename extension} of a particular number of characters built in; for example things ending with \fname{exe}, \fname{bat} or \fname{com} mean that they are executable files. In Unix, a file extension is merely a convention that's not enforced or meaningful to the operating system. So although it's common to give files a suffix that makes it easy for a human to guess what kind of file it is, Unix itself just treats these as part of the file name. In fact, you can have multiple `file extensions' in a name, to indicate a nesting of file types. In the previous lab the file \fname{quake3.tar.gz} is a \concept{tar} archive that has been \concept{gzipped}, but the presence of the \fname{.tar} and \fname{.gz} parts are really just there to tell the user how to treat the file.
+If you've mostly used Windows or macOS via a GUI, then you're probably used to files such as \fname{cheese.jpg}, where you would interpret \fname{cheese} as being the file \textit{name} and \textit{jpg} as being the file \textit{extension}. Some operating systems---notably Windows---have the notion of a \wikipedia{Filename_extension}{filename extension} of a particular number of characters built in; for example things ending with \fname{exe}, \fname{bat} or \fname{com} mean that they are executable files. In Unix, a file extension is merely a convention that's not enforced or meaningful to the operating system. So although it's common to give files a suffix that makes it easy for a human to guess what kind of file it is, Unix itself just treats these as part of the file name. In fact, you can have multiple `file extensions' in a name, to indicate a nesting of file types. In the previous lab the file \fname{quake3.tar.gz} is a \concept{tar} archive that has been \concept{gzipped}, but the presence of the \fname{.tar} and \fname{.gz} parts are really just there to tell the user how to treat the file.
 \end{diversion}
 
 We've created a template file for you to get going with. Make sure you are in your home directory, then use the \ttout{curl} command as in the last lab session to fetch the template from  \\
@@ -151,7 +151,7 @@ To modify the file, you'll need to use a text editor. Type
 \end{ttoutenv}
 
 to invoke the \ttout{nano} editor. Although fairly basic, the nano editor has all the features you'll need to make these changes, and helpfully shows you the various keyboard shortcuts to do particular things such as saving and quitting at the bottom of the screen (remember, the \concept{caret symbol} (\texttt{\textasciicircum}) is shorthand for `\ttout{ctrl}', so \texttt{\textasciicircum X} means '\ctrl{X}').
-%(It is worth noting that, although all the key presses at the bottom of the screen are described using upper case letters, e.g. \texttt{\textasciicircum G} to obtain help, you actually have to type lower case letters in practice, e.g. \texttt{\textasciicircum g}. You will see this rather odd usage elsewhere, for example in the keyboard shortcuts shown alongside menus in Windows and Mac OS X.)
+%(It is worth noting that, although all the key presses at the bottom of the screen are described using upper case letters, e.g. \texttt{\textasciicircum G} to obtain help, you actually have to type lower case letters in practice, e.g. \texttt{\textasciicircum g}. You will see this rather odd usage elsewhere, for example in the keyboard shortcuts shown alongside menus in Windows and macOS.)
 
 Now use it to make the following changes:
 
@@ -291,25 +291,21 @@ Next you're going to start up one of Linux's many graphical user interfaces. Typ
 \end{ttoutenv}
 
 
-You'll see a chunk of text scroll up the screen briefly before being presented with something that looks like the screen shot in Figure \ref{figure:gnome-desktop}, although the background may look slightly different.
+You'll see a chunk of text scroll up the screen briefly before being presented with something that looks like the screenshots in Figures \ref{figure:gnome-desktop} and \ref{figure:gnome-logout}, although the background may look slightly different.
 
 % TODO Update this screenshot as SL has changed from GNOME 2 to GNOME 3 PW
 \begin{figure}[t]
 %\centerline{\includegraphics[width=16cm]{images/gnome-desktop}}
-\centerline{\includegraphics[width=16cm]{images/gnome-startup-annotated}}
+\centerline{\includegraphics[width=16cm]{images/gnome-apps}}
 \caption{Scientific Linux's default graphical user interface and
 window manager, GNOME 3.
-The screen is almost empty but clicking on \protect\circled{1} Activities will give you a screen which looks like~\ref{figure:gnome-activities}. Clicking on your name \protect\circled{2} shows the `log out'  option.}%
+The screen is almost empty but clicking on `Applications' on the far left of the top menu bar opens a menu of apps. Clicking on the `power' icon on the far right gives the `log out' option as shown in Figure~\ref{figure:gnome-logout}.}%
 \label{figure:gnome-desktop}
 \end{figure}
 
 \begin{figure}[t]
-%\centerline{\includegraphics[width=16cm]{images/gnome-desktop}}
-\centerline{\includegraphics[width=16cm]{images/gnome-activities-annotated}}
-\caption{GNOME 3 Activities. \protect\circled{1} the left panel contains
-  shortcuts to
-  some frequently-used tools. You can  configure the shortcuts
-  to include your favourite things, and \protect\circled{2} a search box can be used to easily find other applications.}\label{figure:gnome-activities}
+\centerline{\includegraphics[width=8cm]{images/gnome-logout}}
+\caption{Logging out from GNOME 3.}\label{figure:gnome-logout}
 \end{figure}
 
 Take a few minutes to explore the graphical environment. Even if you've never used Linux before, you'll probably find the general principles of this environment quite familiar: there are icons on the desktop giving you access to the computer via a graphical file browser, and at the top of the screen a menu-bar allows you to start various applications and utilities. The full manual for this environment---which is called GNOME 3---is available online at
@@ -365,7 +361,7 @@ But what do we mean by `execute commands'? You've probably got the hang of the f
 
 \section{X Windows}
 
-Unlike OS X and Windows and most mobile operating systems, Linux doesn't really have a graphical windowing environment `built in'; what you've seen just now is a series of programs that co-operate with one another to  create the familiar WIMP environment \firstcommand{(if you don't know what WIMP means yet, go back and read Breakout~\ref{breakout:wimp} from earlier in these notes)}.
+Unlike macOS and Windows and most mobile operating systems, Linux doesn't really have a graphical windowing environment `built in'; what you've seen just now is a series of programs that co-operate with one another to  create the familiar WIMP environment \firstcommand{(if you don't know what WIMP means yet, go back and read Breakout~\ref{breakout:wimp} from earlier in these notes)}.
 
 \begin{figure}[htb]
   \begin{center}
@@ -424,7 +420,7 @@ Awesome & \ttout{awesome} & A very very lean \textit{tiling} window manager. \te
 
 
 \begin{diversion}{Tiling window managers}
-It's likely that you are so familiar with the way that windows are managed on operating systems like Windows or OS X that you've never really thought about alternatives.
+It's likely that you are so familiar with the way that windows are managed on operating systems like Windows or macOS that you've never really thought about alternatives.
 Awesome and Xmonad are very minimalist window managers, probably quite unlike anything you've used before. Most WIMP environments that you'll have used so far make you the user responsible for the position and size/shape of the windows that represent tools and applications on the desktop. The upside of this is that you can arrange things exactly as you like them; the downside is that you probably use up an amount of time doing that arrangement, and often end up with a layout that wastes some of the desktop's usable space. Awesome is what's called a `tiling' window manager; instead of giving you detailed control over the exact shape of windows, it lays them out on the screen in one of several configurations designed to maximise the use of space. Because you can't drag or resize windows with the mouse, there's no need for the usual window decorations, so you save a few pixels this way too.
 
 There's no doubt that these window managers are at the hard-core end of the window manager spectrum, and are designed for experienced users that need a very large numbers of windows open at once, probably spread over several physical displays (as in Figure \ref{figure:awesome}). Apart from the `tiling' aspect, it gives you virtually no visual cues as to how to perform various actions, most of which are designed to be invoked via keyboard shortcuts (in fact, Awesome is designed so that you can use all of its features without needing to touch the mouse at all.) Once you've remembered all the keyboard combinations, using a window manager like Awesome or Xmonad can be extremely efficient in terms of time and screen-space.

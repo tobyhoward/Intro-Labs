@@ -4,11 +4,12 @@ distribution.
 
 In order to use them you need to run the command
 
-git clone https://github.com/gdg8/csstyles.git
+  git clone https://github.com/gdg8/csstyles.git
 
 in a directory where LaTeX will find them.
 
 On a Mac a good place is in ~/Library/texmf/tex/latex
+
 On Linux it's ~/texmf/tex/latex
 
 Some additional style files are needed before the makefile will run successfully. 
@@ -19,3 +20,31 @@ You also need an up to date version of texlive (we have used the 2013 distributi
 Note: If you are using TexLive 2014, you may need to remove or rename the file
 mdframed.sty in the csstyles directory, as a newer version is available as part
 of the TexLive distribution.
+
+Making the PGT version (Toby, 03/09/17)
+----------------------
+
+The PGT version is made from a subset of the UG files --
+intro{0,2,4}.tex -- together with some conditional commands in the
+.tex to avoid some UG-specific bits:
+
+\begin{firstonly}
+stuff to appear in UG version only
+\end{firstonly}
+
+\begin{pgtonly}
+stuff to appear in PGT version only
+\end{pgtonly}
+
+and
+
+\firstorpgt{UG text}{PGT text}
+
+intro-body-pgt.tex needs editing
+per year to set the date. Otherwise to build the PGT doc type
+ 
+  make pgt
+
+and pgt-intro.pdf is made.
+
+[ends]

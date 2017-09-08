@@ -1,6 +1,3 @@
-
-
-
 \begin{firstonly}
 \chapter{Getting started}
 \label{cha:getting-started}
@@ -9,8 +6,7 @@
 
 \section{Welcome}
 
-
-  Hello and welcome. In this first, introductory, lab we're going to
+Hello and welcome. In this first, introductory, lab we're going to
 cover some of the basic things you'll need to know about the IT
 infrastructure here in the School of Computer Science, and get your
 Raspberry Pi set up so that you can get going quickly in the next lab.
@@ -25,7 +21,7 @@ not be so obvious...
   
 \section{Computing Infrastructure}
 \label{cha:getting-started}
-  Hello and welcome. In this introductory lab we're going to
+Hello and welcome. In this introductory lab we're going to
 cover some of the basic things you'll need to know about the IT
 infrastructure here in the School of Computer Science.
 Some of what we tell you may well seem very obvious to you, and if
@@ -35,7 +31,12 @@ not be so obvious...
 These notes are a modified version of some that we use in our first year Undergraduate programme. We have tailored them for PGT students, but there may be some places where they betray their origins.
 \end{pgtonly}
 
-In this and every lab there will be staff, consisting of academic staff and postgraduate students, around to help you. If you're stuck or find something that you really can't understand, then \emph{please ask for help}; that's what the lab staff are here for, don't just sit there getting frustrated. The postgraduate students are known as \concept{Teaching Assistants}, or \concept{TAs} for short, although up to 2014 they were referred to as \concept{Demonstrators}. We will try to use the new name, but inevitably both will be used for a while.
+In this and every lab there will be staff, consisting of academic
+staff and postgraduate students, around to help you. If you're stuck
+or find something that you really can't understand, then \emph{please
+  ask for help}; that's what the lab staff are here for, don't just
+sit there getting frustrated. The postgraduate students are known as
+\concept{Teaching Assistants}, or \concept{TAs} for short.
 
 
 \section{About these notes}
@@ -61,19 +62,34 @@ Scattered throughout the main text of these exercises there are information boxe
 
 \subsection{Styles and conventions}
 
-We'll be using various typographic styles to indicate different things throughout these notes. When we introduce new concepts, or use terms that have a different meaning in computer science to their everyday use, they will appear \concept{like this}, and will be explained in the nearby text. Things that are either the input or output to commands will appear \ttout{in this font}. And many words or phrases will have a little `w' after them, meaning that if you click on the term (if you're reading the notes online) or type the phrase into \wikipedia{wikipedia}{Wikipedia} (if you're reading this on paper), you should be taken to a sensible definition in case you want to learn more about something that we've touched on here.
+We'll be using various typographic styles to indicate different things
+throughout these notes. When we introduce new concepts, or use terms
+that have a different meaning in computer science to their everyday
+use, they will appear \concept{like this}, and will be explained in
+the nearby text. Things that are either the input or output to
+commands will appear \ttout{in this font}. And many words or phrases
+will have a little `w' after them, meaning that if you click on the
+term (if you're reading the notes online) or type the phrase into
+\wikipedia{wikipedia}{Wikipedia} (if you're reading this on paper),
+you should be taken to a sensible definition in case you want to learn
+more about something that we've touched on here.
 
-Where you see text in square brackets [LIKE THIS] it will mean that when you're typing things you should replace the text with something that the text describes; for example [NAME OF THIS CITY], would become Manchester.
+Where you see text in square brackets [LIKE THIS] it will mean that
+when you're typing things you should replace the text with something
+that the text describes; for example [NAME OF THIS CITY], would become
+Manchester.
 
 \section{The CS labs setup}
 
 All the desktop PCs in the labs in the Kilburn building are
 `dual-boot': they can be started up running either Linux or
-Windows. This is for flexibility -- the labs for most course units  use
-Linux, but some use Windows, and of course, outside the labs, you're free to use
-whichever you prefer for any aspect of your studies that does not require use of a particular operating system. If you're not
+Windows. This is for flexibility -- the labs for most course units use
+Linux, but some use Windows, and of course, outside the labs, you're
+free to use whichever you prefer for any aspect of your studies that
+does not require use of a particular operating system. If you're not
 familiar with Linux, don't worry. We'll be telling you a bit about it
-in this lab, and you'll be looking at it in much more detail in subsequent labs.
+in this lab, and you'll be looking at it in much more detail in
+subsequent labs.
 
 \section{Using Windows}
 \label{sec:using-windows}
@@ -88,8 +104,10 @@ If your PC is currently in Linux, showing a black screen with a login prompt,  y
 this, press \ttout{ctrl}, \ttout{alt} and \ttout{delete}.
 
 This will probably cause strange messages to appear on the screen,
-disappear, and be replaced by yet more strange messages. Now look at Figure~\ref{figure:welc-grub}: when you see something like that on the screen press \ttout{space} you will need to respond. Meanwhile, be patient,
-watch it all happen, and don't worry what it all means.
+disappear, and be replaced by yet more strange messages. Now look at
+Figure~\ref{figure:welc-grub}: when you see something like that on the
+screen press \ttout{space} you will need to respond. Meanwhile, be
+patient, watch it all happen, and don't worry what it all means.
 
 After a while,
 everything should settle down and the screen will look like
@@ -129,7 +147,7 @@ If you forget your password later on, you can also use one of the following meth
 \begin{itemize}
 \item If you have access to a web browser, use the password recovery page at\\ \url{https://iam.manchester.ac.uk/recover}
 %\item Visit the \verb|it.changes| Helpdesk in Kilburn Lower First area (Welcome Week, 09:00 -- 17:00)
-\item You can also contact the University IT helpdesk (opening hours are Monday to Friday 9am to 5pm) by phone on 0161 306 5544, or dial 65544 from a University internal phone; or you can visit a helpdesk either on the ground floor of the Kilburn Building, in the Main Library (Building 55 on
+\item You can also contact the University IT helpdesk (opening hours are Monday to Friday 09:00 -- to 17:00) by phone on 0161 306 5544, or dial 65544 from a University internal phone; or you can visit a helpdesk either on the ground floor of the Kilburn Building (Room G-96), in the Main Library (Building 55 on
 the Campus Map), or in the Alan Gilbert Learning Commons (building 63).
 \item Remember, if you need help, ask!
 \end{itemize}
@@ -147,12 +165,12 @@ You will have to authenticate again to access this page, which should look somet
 \section{Reading your email}
 
 We use email extensively in the School, so it's vitally important that
-you read your mail regularly---we work on the assumption that you'll be checking your School email at least once a day (and probably much
-more often). On the My Manchester page, follow the mail link (indicated by the hand drawn arrow  in
-Figure~\ref{figure:welc-mymanchester}) to access your email on the
-University's Office365 system. This is a system that
-gives you 25GB of email storage space and an integrated calendar. You should
-see a page looking something like Figure~\ref{figure:welc-mail365}.
+you read your mail regularly---we work on the assumption that you'll
+be checking your School email at least once a day (and probably much
+more often). On the top menu bar of your My Manchester page, click the Mail icon next to `Search'
+to access your email on the University's Office 365 system, which gives you 25GB of
+email storage space and an integrated calendar. You should see a page
+looking something like Figure~\ref{figure:welc-mail365}.
 
 \begin{firstonly}
 Have a look around for a few minutes and check what mail you've
@@ -164,31 +182,39 @@ School which  tells you what's going on each week. Take a moment to read it now.
 \end{firstonly}
 
 \begin{figure}
-\centerline{\includegraphics[width=15cm]{images/mymanchester.pdf}}
-\caption{Your MyManchester page.}
+\centerline{\includegraphics[width=15cm]{images/myManchester-AY17.png}}
+\caption{Your My Manchester page.}
 \label{figure:welc-mymanchester}
 \end{figure}
 
 \begin{figure}
-\centerline{\includegraphics[width=15cm]{images/outlook.pdf}}
-\caption{Your Office365 email.}
+\centerline{\includegraphics[width=15cm]{images/Office365-AY17}}
+\caption{Your Office 365 email.}
 \label{figure:welc-mail365}
 \end{figure}
 
 \label{sec:reading-your-mail}
 
-Office365, like most modern email systems, supports the IMAP
-protocol -- which means that you can access your mail from any device
-that can run an IMAP mail client. Some examples of such clients are:
-Mozilla Thunderbird, Mac Mail, Windows Live Mail and mail apps on mobile devices. No matter what
-client you use, you need to tell it the appropriate settings. The mechanism for finding these setting can be found in our CS student IT wiki, which is located on the web at \urlnop{wiki.cs.manchester.ac.uk/index.php/StudentFAQ/IT}. Look for the answer to the question 'How do I configure my favourite IMAP mail client?'. This wiki provides help about the IT infrastructure within the School; it is one of several School FAQ lists, which can be found at \urlnop{wiki.cs.manchester.ac.uk/index.php/StudentFAQ}. Please make use of these valuable sources of information.
+Office 365, like most modern email systems, supports the IMAP protocol
+-- which means that you can access your mail from any device that can
+run an IMAP mail client. Some examples of such clients are: Mozilla
+Thunderbird, Mac Mail, Outlook and mail apps on mobile devices. No
+matter what client you use, you need to tell it the appropriate
+settings. The mechanism for finding these setting can be found in our
+CS student IT wiki, which is located on the web at
+\urlnop{wiki.cs.manchester.ac.uk/index.php/StudentFAQ/IT}. Look for
+the answer to the question 'How do I configure my favourite IMAP mail
+client?'. This wiki provides help about the IT infrastructure within
+the School; it is one of several School FAQ lists, which can be found
+at \urlnop{wiki.cs.manchester.ac.uk/index.php/StudentFAQ}. Please make
+use of these valuable sources of information.
 
-Once you've found the settings, use Office365 to email this information to yourself, to your
+Once you've found the IMAP and mail server settings, use Office 365 to email this information to yourself, to your
 University account, which is usually of the form:
 
 \url{firstname.lastname@student.manchester.ac.uk}
 
-You should also write this information down somewhere you can find it, as you will need it \firstorpgt{in a later lab}{later}  when you may not have access to your email.
+You should also write this IMAP and mail server information down somewhere you can find it, as you will need it \firstorpgt{in a later lab}{later}  when you may not have access to your email.
 
 \enlargethispage{\baselineskip}
 \emph{You'll need this information later so please don't delete this email after you've read it.}
@@ -221,7 +247,7 @@ see a black screen, with a white login prompt.
 
 \pgtcommand{\endinput}
 We won't login to Linux
-at this stage, that can wait until a later lab, next week. We would,
+at this stage, that can wait until a later lab. We would,
 however, like you to read the rest of this document, which gives you
 some useful and interesting background information about Linux. If you
 don't have time to finish reading it in the lab, please make sure you
@@ -232,13 +258,13 @@ Before we move on to this reading we would like you to make a start in setting u
 
 \section{Getting started with Raspberry Pi}
 
-You should by now have received a bag containing all the bits you'll need to assemble your Raspberry Pi. The Raspberry Pi is an astonishing piece of hardware. Not because it is super-fast or super-powerful---it's actually quite a slow computer by today's standards---but because it is small, cheap and needs very little energy to run. Its cheapness means you can experiment with it safe in the knowledge that if you mess it up, lose it, or drop it into the canal, getting hold of a replacement isn't going to cost you much more than a text-book or a night out at the cinema. Its small size and fairly modest power requirements mean that it can be put to use in lots of applications where a regular-sized PC would be impractical.  We hope this will encourage you to experiment and explore, and to take risks playing with both its hardware and software that you might be reluctant to do on your own computer or tablet, or simply can't do with the School's lab machines.
+You should by now have received all the bits you'll need to assemble your Raspberry Pi. The Raspberry Pi is an astonishing piece of hardware. Not because it is super-fast or super-powerful---it's actually quite a slow computer by today's standards---but because it is small, cheap and needs very little energy to run. Its cheapness means you can experiment with it safe in the knowledge that if you mess it up, lose it, or drop it into the canal, getting hold of a replacement isn't going to cost you much more than a text-book or a night out at the cinema. Its small size and fairly modest power requirements mean that it can be put to use in lots of applications where a regular-sized PC would be impractical.  We hope this will encourage you to experiment and explore, and to take risks playing with both its hardware and software that you might be reluctant to do on your own computer or tablet, or simply can't do with the School's lab machines.
 
 In this lab session we start the process of setting up the  Raspberry Pi and continue in the next one to use it and get you familiar with the Pi, and with some of the basics of the Linux operating system it uses. We're going to be covering a lot of ground quite quickly, and it's important that you read these notes carefully and follow the instructions precisely for now. As the lab sessions progress, the instructions will become much less prescriptive, and we'll be encouraging you to experiment and explore much more, and to find out things for yourself. But for now, just follow our lead.
 
 The most remarkable thing about the Pi is that, although it's not the most powerful of computers, it is capable of running the same full \wikipedia{Linux}{Linux} operating system as the machines that you'll be using in the labs for the duration of your studies, and which you'll undoubtedly encounter in your future careers. We're actually going to be using slightly different flavours of Linux on the Pi and the lab machines, but the differences are fairly minor---more on that later. Let's get started.
 
-The Raspberry Pi itself is just the circuit board shown from the top in Figure \ref{figure:bare-rpi}. Your kit contains a Pi together with a case, SD card and power supply. If you want to replace the case with one in a different style you're welcome to do so (there are plenty available to buy online, and lots of people have made their own unique ones just for the fun of it). The Pi is reasonably robust, and you can use it without a case, but obviously it's a bit more vulnerable if it's not in a box of some sort. Figure \ref{figure:bare-rpi-underside} shows the Pi's circuit board from beneath, indicating where the micro SD card gets inserted.
+The Raspberry Pi itself is just the circuit board shown in Figure~\ref{figure:bare-rpi}. Your kit contains a Pi together with a case, SD card and power supply. If you want to replace the case with one in a different style you're welcome to do so (there are plenty available to buy online, and lots of people have made their own unique ones just for the fun of it). The Pi is reasonably robust, and you can use it without a case, but obviously it's a bit more vulnerable if it's not in a box of some sort. Figure \ref{figure:bare-rpi-underside} shows the Pi's circuit board from beneath, indicating where the micro SD card gets inserted.
 
 \begin{rpi}{Why is it called a Pi?}
   The Raspberry Pi apparently got its name because (a) lots of other computer systems have been named after fruit (you'll know of Apple and Blackberry, but in the past there has also been at least Apricot and Tangerine), and (b) the \wikipedia{Python_(programming_language)}{Python language} was one of the first things ported to run on it. The logo was created by Paul Beech, and is based on \wikipedia{Buckminsterfullerene}{Buckminsterfullerene}, a spherical fullerene molecule more commonly called a Buckyball. Its designer pointed out that a full buckyball has 32 faces, but that only 11 are visible in the 2D logo; and that the Raspberry Pi has a 32-bit processor and an ARM11 on board.
@@ -249,59 +275,58 @@ The ARM processor, on which the Pi and the vast majority of the world's other mo
 \subsection{Connecting the Pi}
 \label{sec:connecting-pi}
 
-
 \begin{figure}
-\centerline{\includegraphics[width=15cm]{images/rpi2-front}}
-\caption{An uncased Raspberry Pi 2. The numbered connectors are \protect\circled{1} HDMI output,  \protect\circled{2} four USB ports,  \protect\circled{4} micro-USB power input,  \protect\circled{6} stereo audio out,  \protect\circled{7} General Purpose Input/Output (GPIO),  \protect\circled{8} Ethernet.}\label{figure:bare-rpi}
+\centerline{\includegraphics[width=15cm]{images/pi3top}}
+\caption{An uncased Raspberry Pi 3. The numbered connectors are \protect\circled{1} HDMI output,  \protect\circled{2} four USB ports,  \protect\circled{3} micro-USB power input,  \protect\circled{4} stereo audio out,  \protect\circled{5} General Purpose Input/Output (GPIO),  \protect\circled{6} Ethernet.}\label{figure:bare-rpi}
 \end{figure}
 
 \begin{figure}
-\centerline{\includegraphics[width=15cm]{images/rpi2-back}}
-\caption{A naked Raspberry Pi from below. The ports are numbered as in Figure~\ref{figure:bare-rpi}, and in addition \protect\circled{3} shows the location of the micro SD (Secure Digital) memory card and the correct orientation of the card to insert into the Pi.}\label{figure:bare-rpi-underside}
+\centerline{\includegraphics[width=15cm]{images/pi3bot.jpg}}
+\caption{A Raspberry Pi 3 from below. The ports are numbered as in Figure~\ref{figure:bare-rpi}, and \protect\circled{7} shows the location of the micro SD (Secure Digital) memory card slot, and the correct orientation of the card to insert into the Pi. The card is shown much larger than it is!}\label{figure:bare-rpi-underside}
 \end{figure}
 
-It's important that you connect the Pi up in exactly the order specified here---so even if you are familiar with using a Pi, please don't jump ahead and plug everything in at once (no harm will come to the Pi if you do, but this exercise relies on your following our instructions closely). Refer to Figure \ref{figure:cables}, and then connect your Pi up like this:
+It's important that you connect the Pi up in exactly the order specified here---so even if you are familiar with using a Pi, please don't jump ahead and plug everything in at once (no harm will come to the Pi if you do, but this exercise relies on your following our instructions closely). Refer to Figure~\ref{figure:cables}, and then connect your Pi up like this:
 
 \begin{figure}
-\centerline{\includegraphics[width=13cm]{images/cables}}
-\caption{The following cables are available to connect up your Pi. \protect\circled{1} HDMI, \protect\circled{2} Keyboard and Mouse, \protect\circled{3} 5 Volt Micro USB power supply, and \protect\circled{4} network.}\label{figure:cables}
+\centerline{\includegraphics[width=13cm]{images/cablesAY17}}
+\caption{The cables for connecting your Pi. \protect\circled{1} HDMI, \protect\circled{2} keyboard and mouse, and \protect\circled{3} network (ethernet).}\label{figure:cables}
 \end{figure}
-
 
 \begin{itemize}
 \item The monitors in the LF31 Lab are all fitted with an extra video lead for connecting up the Pis. We try to standardise on blue cables for connecting to a Pi. Locate the HDMI lead (labelled \protect\circled{1} in Figure \ref{figure:cables}), and plug this into the socket marked \circled{1} on Figure~\ref{figure:bare-rpi}.
-\item Next we'll need to connect a keyboard and mouse. Separate the male and female USB connectors marked \protect\circled{2} on Figure \ref{figure:cables}, and plug the male end into one of the two USB sockets on your Pi (marked with \protect\circled{2} on the Figure~\ref{figure:bare-rpi}). It doesn't matter which USB socket you choose, but please make sure to reconnect this to the PC when you're done with these experiments as a courtesy to the next user.
+\item Next we'll need to connect a keyboard and mouse. Identify the male and female USB connectors marked \protect\circled{2} on Figure \ref{figure:cables}, and note that there is a red dot on each. Separate the two connectors and plug the male end into one of the USB sockets (it doesn't matter which) on your Pi (marked with \protect\circled{2} on the Figure~\ref{figure:bare-rpi}). Later, when you've finished this lab (and every other time you connect your Pi) please make sure to reconnect the male and female connectors to the PC as a courtesy to the next user. When you reconnect, be sure to align the two dots marked on the male and female connectors, to prevent you forcing them together the wrong way round and damaging them.
 \item \textbf{Do not connect the power or network connectors at this stage!}
 \end{itemize}
 
-Next, we need to insert the memory card that contains the Pi's operating system, and on which you'll be storing your own files (note although this is a `memory card', for the Raspberry Pi it's behaving like the `hard disk' of a regular computer, not like the \textit{memory} of a regular computer). The card you've been given comes in a little caddy that allows it to be used as a full-sized Secure Digital card, but for the Raspberry Pi Model 2 we just need the little mico SD card it contains. Carefully pop that out of the caddy and then refer to Figure ~\ref{figure:bare-rpi-underside} to see where it goes on the Pi's board. It should slide both in and out smoothly. Don't force the card in or you might damage it or the Pi -- if you're not sure, get some help.
+Next, we need to insert the memory card that contains the Pi's operating system, and on which you'll be storing your own files (note although this is a `memory card', for the Raspberry Pi it's behaving like the `hard disk' of a regular computer, not like the \textit{memory} of a regular computer). The card you've been given comes with a little caddy that allows it to be used as a full-sized Secure Digital card, but for the Raspberry Pi Model 3 we just need the little micro SD card. Carefully pop that out of its case and then refer to Figure~\ref{figure:bare-rpi-underside} to see where it goes on the Pi's board. It should slide both in and out smoothly. Don't force the card in or you might damage it or the Pi -- if you're not sure, get some help.
 
+Now we need to switch the input on the monitor from DisplayPort (which
+is the input used by the PC) to DVI (the cable you've
+connected your Pi to is a HDMI to DVI cable). On the lower-right side
+of the monitor you will see 4 buttons -- see
+Figure~\ref{figure:monitorswitch}. 
+%
+\begin{figure}
+\centerline{\includegraphics[width=12cm]{images/DellInputMenu.jpg}}
+\caption{The Input Selection menu on the monitor. This image of the Dell U2412M Monitor has been reproduced with the kind permission of Dell. All rights reserved.}\label{figure:monitorswitch}
+\end{figure}
+%
+Press any of them to bring up the
+monitor's menu. Now press the 3rd button down and navigate to the
+input selection menu. Switch the Input to DVI-D and press the green `tick' button.
 
-
-
-
-Now you're ready to power up the Pi. In our lab setup in LF31 the power to the Pi is supplied via the monitor, so it is important that the monitor is not in standby mode. Standby is indicated by an orange light on the on/off button at the bottom right of the screen, rather than blue if it is on. If the light is orange, press it to turn the monitor off, then again to switch it back on and turn it blue. Now locate the 5v Micro USB cable (the same connector that you'll find on many modern smartphones and tablet devices); this is labelled \protect\circled{3} on Figure~\ref{figure:cables}. This goes into the socket marked \circled{3} on Figure \ref{figure:bare-rpi}. There is no power switch on the Pi, so as soon as the power cable goes in, it will start to boot (this strange term is explained in breakout box~\ref{bootbox}): the red PWR LED should light up and stay on, and you'll also notice that the OK LED (which indicates SD-card activity) to its left also flickers. If any of the other three LEDs marked FDX, LNK, or 10M are lit, then that means you've already plugged a network cable into your Pi, in which case please unplug that now!
-
-
+Now you're ready to power up the Pi. Plug your Pi power supply into the 'toblerone' power block behind the PC, and connect the 5v Micro USB cable (the same connector that you'll find on many phones and tablets) into the socket marked \circled{3} on Figure \ref{figure:bare-rpi}. There is no power switch on the Pi, so as soon as the power cable goes in, it will start to boot (this strange term is explained in breakout box~\ref{bootbox}): the red LED immediately next to the power socket should light up and stay on, and you'll also notice that the other LED to its left (which indicates SD-card activity) also flickers. 
 
 % Moved this Danger Box to intro1
 %\begin{danger}{Pi Power}
 %Like most other computers, the Pi doesn't like having its power removed without being shut down properly. Although you might get away with it, there's a reasonable chance of messing up the operating system if you remove the power while the Pi is in the middle of doing something. And because the Pi runs a multi-tasking operating system, it's almost always `doing something', so pulling the power out unexpectedly is always a bad idea. You're unlikely to damage the Pi's hardware like this, but you may find that you lose work, and may have to reinstall the operating system. For instructions on how to shut the Pi down safely, see Section \ref{section:shutdown}.
 %\end{danger}
 
-Now we need to switch the input on the monitor from DisplayPort (which
-is the input used by the PC under the desk) to DVI (the cable you've
-connected your Pi to is a HDMI to DVI cable). On the lower-right side
-of the monitor you will see 4 buttons -- see
-Figure~\ref{figure:monitorswitch}. Press any of them to bring up the
-monitor's menu. Now press the 3rd button down and navigate to the
-input selection menu. Switch the Input to DVI and all being well you
-should see a black screen containing the Raspberry Pi logo at the top
-left, and white text that scrolls up the screen as the Pi boots.
+You should see a black screen with white text scrolling up the screen as the Pi boots. When things settle down and the screen looks like Figure~\ref{figure:lxde-gui} you're ready for the next task. 
 
 \begin{figure}
-\centerline{\includegraphics[width=12cm]{images/DellInputMenu.jpg}}
-\caption{The Input Selection menu on the monitor. This image  of the Dell U2412M Monitor has been reproduced with the kind permission of Dell. All rights reserved.}\label{figure:monitorswitch}
+\centerline{\includegraphics[width=14cm]{images/pi3-LXDE-AY17.png}}
+\caption{The Pi's default graphical user interface -- a window manager called LXDE.}\label{figure:lxde-gui}
 \end{figure}
 
 %When the boot process finishes for the first time (it will take somewhere
@@ -384,21 +409,52 @@ As an aside, you may want to consider this: if you need a text editor to write p
 % \textbf{pi@raspberrypi ~ \$  }
 % \end{ttoutenv}
 
-The latest generation of the Pi automatically starts a graphical user
-interface; as we need to be more flexible, we will issue some commands to
-disable this behaviour. Once this is done your Pi will subsequently start
-from a simple command line prompt.
 
-On the screen you will see a panel of tool icons on the top
-left. Click on the icon that looks like a monitor screen. This runs a
-command line terminal that you can enter commands in. Don't worry at
-this stage exactly what the commands mean. Type:
+\label{configscreen}
+
+%\subsection{Setting the time}
+%
+%It's very likely that the clock in your Pi is wrong -- possibly very
+%wrong! -- and this can lead to problems when connecting to
+%networks. So you need to set the correct time now. This is a once-only
+%job; the Pi will remember it.
+%
+%On the screen you will see a panel of tool icons on the top
+%left. Click on the icon that looks like a monitor screen. This runs a
+%command line terminal that you can enter commands in. Don't worry at
+%this stage exactly what the commands mean. First make sure you know
+%the current date and time, and then type the command below, followed by the Return key, making sure to
+%match the format of the example exactly. Of course, replace the date/time
+%below with the current one!
+%
+%\begin{ttoutenv}
+%sudo date -s "Sep 18 12:34 2017"
+%\end{ttoutenv}
+%
+%and the Pi should reply to confirm what you have set:
+%
+%\begin{ttoutenv}
+%Mon 18 Sep 12:34 UTC 2017
+%\end{ttoutenv}
+%
+%Check this is right, and repeat the \verb+sudo date+ command if it isn't. (If you're curious about what UTC means, Google it.)
+
+\subsection{Changing your password}
+\label{configscreen}
+
+Now it's time to change your password. This is very important, because
+shortly you'll connect to a network, and it's not safe to do that
+while your Pi still has its default password set.  On the screen you
+will see a panel of tool icons on the top left. Click on the icon that
+looks like a monitor screen. This runs a command line terminal that
+you can enter commands in. Don't worry at this stage exactly what the
+commands mean. Type:
 
 \begin{ttoutenv}
 sudo raspi-config
 \end{ttoutenv}
 
-followed by the Return key.
+followed by the Return key. This will bring up the Pi configuration screen, as shown in Figure~\ref{figure:raspi-config}.
 
 \begin{figure}
 \centerline{\includegraphics[width=13cm]{images/raspi-config.png}}
@@ -408,40 +464,114 @@ followed by the Return key.
 % Once Raspbian has finished booting, you will  
 % be presented with a configuration screen as shown in Figure \ref{figure:raspi-config}. as shown in Figure \ref{figure:raspi-config}.  
 
-You should see a configuration screen as shown in Figure
-\ref{figure:raspi-config}. Use the arrow keys to select `Boot Options',
-then press Tab until \verb+<Select>+ is highlighted,
-then press Return. This will bring up another configuration
-screen. This time use the arrow keys to select the option `Text
-console, requiring user to login'. Again use Tab until
-\verb+<OK>+ is highlighted, then press Return. You should now be
-back at the previous configuration screen. This time use the arrow keys to select `Change User Password` and press Return.
-You'll see another message, but just select \verb+<OK>+ with the Return key to get to the password entry screen.
-Don't worry about the password you're typing not appearing on the screen - that's normal! 
-Select \verb+<OK>+ if the password is changed successfully, and ignore this window for now.
+Use the arrow keys to select `Change User Password' and press Return.
+You'll see another message -- `You will now be asked to enter a new password for the pi user'--  and select \verb+<OK>+ with the Return key to get to the password entry screen, which says `Enter new UNIX password'.
 
-\begin{danger}{Don't forget your password}
-It is very important that you do not forget this password; there's no easy way to get back into your Pi without resetting everything.
+Think of a password for your Pi which is:
+\begin{itemize}
+\item not the same as your University password
+\item easy for you to remember
+\item not easily guessable by someone else
+\end{itemize}
+ 
+and of course keep it secret, and type it in. Don't worry about the password you're typing not appearing on the screen -- that's normal. Select \verb+<OK>+ if the password is changed successfully. Back at the config window, tab to \verb+Finish+ and press Return. 
+
+\begin{danger}{DON'T FORGET YOUR PI PASSWORD}
+It is very important that you do not forget this password; there's no easy way to get back into your Pi without resetting everything, and this is a time-consuming task.
 \end{danger}
 
 \begin{danger}{Memory Loss}
 Although the Pi uses a fairly standard Unix operating system, it's probably not quite as secure as a normal desktop machine because of its small size and easily-removable storage media. Once the Pi has booted from the SD card, it's about as secure as any other Linux machine, but because the memory card is easily removable, it can trivially be connected to another machine as a `removable media' device; and at that point the host machine can almost certainly see its contents, including any of the files you've created, because the filesystem itself isn't encrypted. And because the Pi is small and portable, it's easier to lose it than a laptop or desktop machine; so, be careful!
 \end{danger}
 
+\subsection{Network Registration}
 
-\section{Network Registration}
+For security, the School has created a secure private Raspberry Pi
+network, which is separated from the main University network and the
+internet, so you won't be able to access the world outside the Pi
+network until you register your Pi. Now that your Pi password isn't
+the same as the `out of the box' Pi one, it's safe to plug your Pi
+into the network. Locate the blue ethernet cable poking out of the
+desk (labelled \protect\circled{3} on Figure~\ref{figure:cables}) on
+page~\pageref{figure:cables}; plug that into the network socket on
+your Pi (\circled{6} on Figure~\ref{figure:bare-rpi},
+page~\pageref{figure:bare-rpi}). Click the globe icon in the panel at
+the upper left of the screen. The Chromium web browser should
+appear. Type \verb+google.co.uk+ into the address bar and press enter,
+you should be redirected to the registration page shown in
+Figure~\ref{figure:netreg}. Enter your University username (the
+8-character one starting `m') and your University password. If the
+browser asks if you want to save the password, click \verb+never+.
 
-The Raspberry Pi network here is separated from the main network and the internet, and you will be unable to access other networks until you register your Pi.
-Now that your password isn't the same as the `out of the box' Pi one, it's safe to plug your Pi into the network. Locate the blue ethernet cable poking out of the desk (labelled \protect\circled{4} on Figure~\ref{figure:cables}) on page~\pageref{figure:cables}; plug that into the appropriate socket on your Pi (number \circled{8} on Figure~\ref{figure:bare-rpi}, page~\pageref{figure:bare-rpi}).
-Click the globe icon in the panel at the upper left of the screen. The web browser should appear. Type any URL into the address bar and press enter - you should be redirected to the registration page.
-Simply enter the login details you use for MyManchester and click accept. If you register successfully, you should be told to shutdown your Pi. First, switch back to the command line window.
+If you register successfully, the next page will ask you to shutdown
+your Pi. To do that, click the top-left raspberry icon and on the
+drop-down select \verb+Shutdown+, and on the pop-up pane that appears, select \verb+Shutdown+.
+Lots of cryptic messages will scroll
+down the screen, and the Pi will shutdown, leaving just the red LED lit.
+
+Now you need to wait for two minutes, for the network registration to
+take effect. So have a two-minute break, and read a bit about Unix, further in this document.
+
+After your break, restart the Pi. But how? There is no on-off switch!
+The only way to do this is to very carefully pull out the micro-USB
+power plug and re-insert it. Be careful!
+
+Your Pi should now boot up as before. Start the browser again, and
+check that you can reach \verb+www.cs.manchester.ac.uk+. If not, ask for help.
 
 \begin{figure}
 \centerline{\includegraphics[width=13cm]{images/NetReg.png}}
 \caption{The NetReg registration page.} \label{figure:netreg}
 \end{figure}
 
-Use the tab button to select \verb+<Finish>+ then press Return. You should now see a screen asking `Would you like to reboot?'. Tab to \verb+<No>+ then press return.
+\subsection{Date and time}
+
+The Pi has an internal clock, which can be set automatically by
+syncing it to an Internet time server using the
+\wikipedia{Network_Time_Protocol}{Network Time Protocol (NTP)}. This
+behaviour isn't enabled by default, so we need to switch it on.
+
+As you did before, from the panel of tool icons on the top left of the
+screen, click on the icon that looks like a monitor screen to open a
+command line terminal. Issue the following two commands, typing the
+Return key after each one.
+
+\begin{ttoutenv}
+sudo timedatectl set-timezone "Europe/London"
+sudo timedatectl set-ntp true
+\end{ttoutenv}
+
+Now issue the \verb+date+ command (again, followed by Return) to
+verify the time and date are now correct:
+ 
+\begin{ttoutenv}
+date
+\end{ttoutenv}
+
+\subsection{Disabling the user interface}
+
+As you've seen, the Pi automatically starts a graphical user
+interface; as we need to be more flexible, we will disable this
+behaviour. Once this is done your Pi will subsequently start with a
+simple command line prompt.
+
+In the terminal window where you started the clock syncing, bring up
+the Pi configuration screen again by typing
+
+\begin{ttoutenv}
+sudo raspi-config
+\end{ttoutenv}
+
+and when the configuration screen appears, use the arrow keys to
+select `Boot Options', then press Tab until \verb+<Select>+ is
+highlighted, then press Return. This will bring up another
+configuration screen. This time use the arrow keys to select the
+option `Text console, requiring user to login'. Again use Tab until
+\verb+<OK>+ is highlighted, then press Return. At the next screen tab
+to \verb+finish+ and press Return. The next screen will say `Would you
+like to reboot now?'. Tab to \verb+<No>+ and press Return.
+
+\subsection{Finishing off}
 
 You should now be back in the command line Terminal, where you can stop the Pi by typing
 %$
@@ -449,31 +579,44 @@ You should now be back in the command line Terminal, where you can stop the Pi b
 \begin{ttoutenv}
 sudo halt
 \end{ttoutenv}
+
 followed by the Return key.
 
-\noindent We'll explain a bit more about what's going on here in the next lab session, but for now please just follow the instructions.
+\noindent We'll explain a bit more about what's going on here in the
+next lab session, but for now please just follow the instructions.
 
 %\noindent You'll see the a series of messages scroll past that look rather like those you saw during the boot process. This shouldn't be surprising, since what the operating system is doing now is shutting down all the things that it started up when you booted the machine, roughly in reverse order.
 
-The  Pi will now power itself down; the ACT LED will go off, the screen should go black, and only the red PWD LED will remain lit on the circuit board. At this point it's safe to pull the Micro-USB cable out of the Pi. Please make sure you reconnect the USB connector for use with the PC  as a courtesy to the next user, \emph{taking care to connect the USB cable the correct way round. } Make sure that you leave the desktop PC booted into Linux.
+Now disconnect your Pi. Pull out the Micro-USB cable, the ethernet
+cable, and the mouse/keyboard USB cable. Unplug your Pi
+power supply.  Please make sure you reconnect the USB connector for
+use with the PC as a courtesy to the next user, and make sure the red
+dots align. Leave the desktop PC booted into Linux, but reset its
+display from \verb+DVI-D+ to be \verb+DisplayPort+ again.
 
-That's all we want you to do with the Raspberry Pi for this session, we will start using it in earnest in the next session.  When you have completed the work for this session, please tell the lab supervisor so we know how you're getting on. Remember, if you don't finish it during the lab session, please try to do so before the next one.
+That's all we want you to do with the Raspberry Pi for this session,
+and we'll start using it in earnest in the next session.  When you
+have completed the work for this session, please tell the lab
+supervisor so we know how you're getting on. Remember, if you don't
+finish it during the lab session, try to do so before the next
+one.
 
-\textbf{Please make sure you bring your Pi and this set of notes to all the introductory lab sessions.}
+\textbf{Keep your Pi safe, and bring it, and the power supply, and
+  this set of notes to all the introductory lab sessions.}
 
-\cleardoublepage
+We'll finish this lab with some reading about Unix and Linux -- you
+can read this in your own time, but make sure you read it.
 
 \section{Unix and Linux}
 \label{sec:unix-linux}
 
-
 Over the next couple of weeks you will be undertaking a number of
 introductory labs to familiarise yourself with the School's computing
 infrastructure. Much of this is based on devices and machines running Linux, a
-variant of the Unix family of operating systems; this document
-provides some background on Unix and explains why we think it is
+variant of the Unix family of operating systems; here we
+provide some background on Unix and explains why we think it is
 important. It would very useful if you could read this before you
-attend the first introductory labs, where the emphasis will be on
+attend the early labs, where the emphasis will be on
 leading you through a series of tasks to explore our setup.
 
 \subsection{Operating Systems}
@@ -546,7 +689,7 @@ architecture right. Given how much computing has changed since the 1960s, this w
 
 The history of Unix is complex and convoluted, with the system being updated, re-implemented, and mimicked repeatedly over the years, primarily by commercial companies who guarded their versions jealously. Figure \ref{fig:unix-history} shows a tiny fragment of the Unix's `family tree' (the full diagram, which you can find at \urlnop{www.levenez.com/unix/unix.pdf}, is \emph{many} times the size of the portion you can see here).
 
-\begin{figure}[h!tb]
+\begin{figure}
   \begin{center}
     \includegraphics[width=13cm]{images/unix}
   \end{center}
@@ -554,23 +697,50 @@ The history of Unix is complex and convoluted, with the system being updated, re
 \label{fig:unix-history}
 \end{figure}
 
-Although many of the branches represent interesting innovations of one kind or another, there are perhaps two that deserve particular attention. The first of these was the decision by Apple some time around the turn of the millennium to drop their own---highly popular, but ageing---bespoke operating system (unimaginatively called \wikipedia{Mac_os_9}{Mac OS 9}) in favour of a Unix-based system (now the more familiar `OS X', where `X' is both the Roman numeral `10' and a nod in the direction of the uniX nature of the OS). Although the majority of Mac users are blissfully unaware of the fact, behind the slick front-end of OS X, sits a variant of Unix. The second, and perhaps more profound of these events was the creation in 1991 by Swedish programmer \wikipedia{Linus_torvalds}{Linus Torvalds} of a Unix-like system, the source code to which \emph{he gave away for free}\footnote{`free' here in the sense both of `freedom to reuse or adapt', and also in the sense of `without charge'.}; this became known as the \wikipedia{Linux_kernel}{Linux Kernel}. Combined with other free software created by the \wikipedia{Free_software_foundation}{Free Software Foundation}, a non-commercial version of Unix called \wikipedia{GNU/Linux}{GNU/Linux} was born (GNU here is a recursive acronym for ``GNU's not Unix'', a swipe at other commercial non-Free versions; much to the annoyance of the Free Software Foundation, GNU/Linux is almost always called just `Linux'\footnote{Linux
-is pronounced ``Linn-ucks'', despite the fact the name was coined by
-its creator, and his name `Linus' is pronounced
-``Leen-uss''!}.)
+Although many of the branches represent interesting innovations of one
+kind or another, there are perhaps two that deserve particular
+attention. The first of these was the decision by Apple some time
+around the turn of the millennium to drop their own---highly popular,
+but ageing---bespoke operating system (unimaginatively called
+\wikipedia{Mac_os_9}{Mac OS 9}) in favour of a Unix-based system (now
+the more familiar `OS X', where `X' is both the Roman numeral `10' and
+a nod in the direction of the uniX nature of the OS). Although the
+majority of Mac users are blissfully unaware of the fact, behind the
+slick front-end of OS X, sits a variant of Unix. The second, and
+perhaps more profound of these events was the creation in 1991 by
+Swedish programmer \wikipedia{Linus_torvalds}{Linus Torvalds} of a
+Unix-like system, the source code to which \emph{he gave away for
+  free}\footnote{`free' here in the sense both of `freedom to reuse or
+  adapt', and also in the sense of `without charge'.}; this became
+known as the \wikipedia{Linux_kernel}{Linux Kernel}. Combined with
+other free software created by the
+\wikipedia{Free_software_foundation}{Free Software Foundation}, a
+non-commercial version of Unix called \wikipedia{GNU/Linux}{GNU/Linux}
+was born (GNU here is a recursive acronym for ``GNU's not Unix'', a
+swipe at other commercial non-Free versions; much to the annoyance of
+the Free Software Foundation, GNU/Linux is almost always called just
+`Linux'\footnote{Linux is pronounced ``Linn-ucks'', despite the fact
+  the name was coined by its creator, and his name `Linus' is
+  pronounced ``Leen-uss''!}.)
 
 Linux has been, and continues to be, developed cooperatively by
 thousands of programmers across the world contributing their effort
-largely free of charge (although many are now paid to work on Linux as part
-of their job). It is amazing to think that such
-a project could ever happen---and it is surely a testament to the
-better side of Human Nature. But what is interesting is the
-observation that these programmers are not motivated by commercial
-concerns, but by the desire to make good reliable software and have it
-used by lots of people. Thus, Linux is a good choice of Unix: it's
-Free, it's efficient, and it's reliable, and it is now used by large corporations, governments, research labs and individuals around the world. Even Google's \wikipedia{Android_(operating_system)}{Android} platform is a Linux-based mobile OS, and the  \wikipedia{Amazon_Kindle}{Amazon Kindle} is also a Linux box behind the electronic ink of its user interface (Figure \ref{fig:kindlelinux}).
+largely free of charge (although many are now paid to work on Linux as
+part of their job). It is amazing to think that such a project could
+ever happen---and it is surely a testament to the better side of Human
+Nature. But what is interesting is the observation that these
+programmers are not motivated by commercial concerns, but by the
+desire to make good reliable software and have it used by lots of
+people. Thus, Linux is a good choice of Unix: it's Free, it's
+efficient, and it's reliable, and it is now used by large
+corporations, governments, research labs and individuals around the
+world. Even Google's \wikipedia{Android_(operating_system)}{Android}
+platform is a Linux-based mobile OS, and the
+\wikipedia{Amazon_Kindle}{Amazon Kindle} is also a Linux box behind
+the electronic ink of its user interface (Figure
+\ref{fig:kindlelinux}).
 
-\begin{figure}[h!tb]
+\begin{figure}
   \begin{center}
     \includegraphics[width=13cm]{images/kindleroot}
   \end{center}
@@ -593,6 +763,8 @@ systems. Learning Unix is not only a crucial skill for any serious
 computer scientist, it is a very rewarding experience; the labs over
 the next couple of weeks are designed to help you become familiar with what will be your daily working environment.
 
-When you have completed the work for this session, please tell the lab supervisor, so we know how you're getting on.
+When you have completed the work for this session, please tell the lab
+supervisor, so we know how you're getting on.
 
-\textbf{Please make sure you bring your Pi and this set of notes to all the introductory lab sessions.}
+\textbf{Reminder: keep your Pi safe, and bring it, and the power supply, and
+  this set of notes to all the introductory lab sessions.}
