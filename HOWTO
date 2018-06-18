@@ -1,4 +1,5 @@
-* handy git commands
+Handy git commands
+------------------
 
 1. stage a change to F
 git commit F [-m "message"]
@@ -9,7 +10,12 @@ git commit -a [-m "message"]
 3. push changes to the master repo
 git push
 
-* LaTeX stuff
+4. add a new file N
+git add N
+git commit
+
+LaTeX stuff
+-----------
 
 The LaTeX source files in this repository rely on some style files
 that are not present and not part of the standard texlive
