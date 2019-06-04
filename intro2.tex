@@ -29,7 +29,7 @@ In this lab session we're going to explore some of the features of Unix in a bit
 %%% BEGIN CONSOLE MODE SESSION
  Make sure the desktop PC is booted into Linux, and log in using your University username and password \firstcommand{(\emph{not} the username and password you used on the Pi)}. Remember that nothing will appear on the screen when you type your password. You should be greeted with a similar, but rather longer, command prompt to the one you saw in the previous lab.
 
- You are now logged in to a PC that is part of our School Linux network. Type \cmnd{pwd}{pwd} to find out which directory you are in. It should be something like \ttout{/home/mbaXXXXX}, where the part after the \ttout{/home/} is your username. This is your home directory, which is not actually stored on the desktop PC but on a central fileserver. This means that, whichever machine you use in the lab, you will always see the same home filestore.
+ You are now logged in to a PC that is part of our School Linux network. Type \cmnd{pwd}{pwd} to find out which directory you are in. It should be something like \ttout{/home/x12345zz}, where the part after the \ttout{/home/} is your username. This is your home directory, which is not actually stored on the desktop PC but on a central fileserver. This means that, whichever machine you use in the lab, you will always see the same home filestore.
 
  The environment you are now in is known as \concept{terminal mode}. This is a way of interacting with  the computer via a screen containing only text, without the now familiar windows and images. All interaction is done using a \concept{command line interface} (CLI), typing commands into a program known as a \concept{shell}. When the terminal occupies the entire screen, as it does here, it is known as \concept{console mode}.
  %A useful summary of the history of the term console can be found at \urlnop{www.linfo.org/console.html}.
@@ -98,9 +98,10 @@ Back to configuring your email client. Before we use \cmnd{mutt}{mutt}, we need 
 If you've mostly used Windows or macOS via a GUI, then you're probably used to files such as \fname{cheese.jpg}, where you would interpret \fname{cheese} as being the file \textit{name} and \textit{jpg} as being the file \textit{extension}. Some operating systems---notably Windows---have the notion of a \wikipedia{Filename_extension}{filename extension} of a particular number of characters built in; for example things ending with \fname{exe}, \fname{bat} or \fname{com} mean that they are executable files. In Unix, a file extension is merely a convention that's not enforced or meaningful to the operating system. So although it's common to give files a suffix that makes it easy for a human to guess what kind of file it is, Unix itself just treats these as part of the file name. In fact, you can have multiple `file extensions' in a name, to indicate a nesting of file types. In the previous lab the file \fname{quake3.tar.gz} is a \concept{tar} archive that has been \concept{gzipped}, but the presence of the \fname{.tar} and \fname{.gz} parts are really just there to tell the user how to treat the file.
 \end{diversion}
 
+\cbstart
 We've created a template file for you to get going with. Make sure you are in your home directory, then use the \ttout{curl} command as in the last lab session to fetch the template from  \\
-\url{https://studentnet.cs.manchester.ac.uk/ugt/COMP10120/files/mutt-template}
-
+\url{https://syllabus.cs.manchester.ac.uk/ugt/COMP10120/files/mutt-template}
+\cbend
 
 Remember, you're going to need to use a switch argument to tell \cmnd{curl}{curl} what it should call the file it's fetched: call it anything you like, but \fname{mutt-template} is a perfectly good name (if you're feeling uncomfortable about a file that doesn't have a file-extension, see Breakout~\ref{diversion:file-extensions} for more information). Let's look at the file to see what's in it. Type
 
@@ -260,9 +261,11 @@ and you should see a list of all the lines from \ttout{weather.txt} that contain
 
 Rather like \cmnd{less}{less}, if \ttout{grep} isn't given the name of a file as its last command-line argument (in this case we used \fname{weather.txt}), it will operate on standard input instead of grepping through a file (yes, it's quite okay to use grep as a verb from now, no one will look at you funny). Use this knowledge to join together \cmnd{lynx}{lynx} and \cmnd{grep}{grep} so that the output is a single line describing the weather in Manchester at the time we run the command. The output should look something like:
 
+\cbstart
 \begin{ttoutenv}
-   [33]Manchester 22\textdegree{}C 72\textdegree{}F
+   Manchester Sunny Intervals
 \end{ttoutenv}
+\cbend
 
 As a final flourish, let's create a new a way of accessing this new `weather in Manchester' tool that you've created. Type:
 
@@ -341,9 +344,7 @@ Perform the following tasks:
 \end{figure}
 
 \begin{diversion}{Inkscape and GIMP: Vector and bitmap graphics}
-Inkscape is a vector graphics drawing package; it allows you to draw and manipulate different shapes to create pictures and diagrams. It is ideal for drawing diagrams and figures. When you're using a tool such as Inkscape you're manipulating geometrical shapes such as points, lines and curves. One of the big advantages of this approach is that images look the same regardless of what magnification you use. In these notes we've tried where possible to use vector images, so you should be able to zoom into the pages on the electronic version without seeing any `pixellation' happening. Some figures contain a mixture of vector and bitmap graphics; for example, zoom into Figure \ref{figure:gnome-desktop} and you'll see that the image of the desktop itself starts to become jagged (because it's a bitmap), whereas the red boxes and numbers stay nice and crisp at any magnification (because they're vectors).
-
-GIMP, on the other hand, is a bitmap based image manipulation package; it treats images as being made up of lots of coloured dots (pixels). GIMP is great for editing photographs and creating certain types of artwork, but it's not hugely useful for drawing diagrams.
+Inkscape is a vector graphics drawing package; it allows you to draw and manipulate different shapes to create pictures and diagrams. It is ideal for drawing diagrams and figures. When you're using a tool such as Inkscape you're manipulating geometrical shapes such as points, lines and curves. One of the big advantages of this approach is that images look the same regardless of what magnification you use. In these notes we've tried where possible to use vector images, so you should be able to zoom into the pages on the electronic version without seeing any `pixellation' happening. GIMP, on the other hand, is a bitmap based image manipulation package; it treats images as being made up of lots of coloured dots (pixels). GIMP is great for editing photographs and creating certain types of artwork, but it's not hugely useful for drawing diagrams.
 
 It's worth understanding the pros and cons of these two different approaches to graphics, it'll save you a lot of heartache later on and you'll end up creating more professional looking figures in your documents. The Wikipedia page on \wikipedia{Vector_graphics}{vector graphics} provides a good explanation of the different approaches.
 
@@ -446,7 +447,7 @@ Now, if you're going to use the graphical environment as your primary interface 
 
 Back in the previous lab session we explained that when you log into a Unix machine, an interactive shell is created for you to run commands from, and that the shell is `just a program' like any other that just happens to be the one nominated to be the first thing to run when you log in.
 
-What about nominating the graphical environment as the first thing to run instead? We've already pointed out that it's `just a program' too, so that should be okay? Although in theory it's possible to do this, in practice it's a bad idea: shells are quite simple self contained programs, whereas graphical environments are much more complex systems relying on hundreds of files to be installed in the right places in order to work. You certainly don't want to set your system up in a way that if the graphical environment gets damaged in some way you can't log in at all.
+What about nominating the graphical environment as the first thing to run instead? We've already pointed out that it's `just a program' too, so that should be okay? Although in theory it's possible to do this, in practice it's a bad idea: shells are quite simple self-contained programs, whereas graphical environments are much more complex systems relying on hundreds of files to be installed in the right places in order to work. You certainly don't want to set your system up in a way that if the graphical environment gets damaged in some way you can't log in at all.
 
 Instead we'll show you a rather safer way to get the GUI to fire up when you log in.
 
@@ -554,149 +555,6 @@ If you've mistyped any of the lines in \fname{.bash\_profile} you may find that 
 
 % TODO Cannot check this as a member of staff - get a vacation student
 % TODO to verify that it still works? PW
-\begin{firstonly}
-\section{ARCADE}
-
-We would now like you to register your access to the ARCADE server. ARCADE is the laboratory management system we use to administer coursework marks and deadlines, etc.. You can use the client query program to look up your details, laboratory timetables, marks, and so on, throughout the year. It is recommended you do this fairly regularly, if only to check that mistakes have not been made in your marks! You need to register with ARCADE before any of your lab work can be submitted, so it is much better to do it now than wait until your first deadline!
-
-In a terminal window, run the command \ttout{/opt/teaching/bin/arcade}; after a short pause, a new window will pop up. In the large text box you should find a message telling you that you are not yet authenticated, and that you have just been sent an email. If this is so, then quit the program, read the email you have just been sent by the ARCADE server, and carefully follow the instructions in it. Now start the ARCADE Query client again, and it should now connect you to the server. If this works, then your access is set up; if it doesn't then check you've followed the instructions precisely. If it still doesn't work then, as always, ask for help; \emph{it is very important that this registration process is completed.}
-
-Explore the various queries of the client, and familiarise yourself with the the user interface. Check that your registration details are correct. Feel free to ask for explanation if it is not obvious to you.
-  
-\end{firstonly}
-
-\section{Text Editors}
-
-% \begin{note}
-%   Need something for them to do here with editor. Idea was to fix .bash profile to prevent the problem when using ssh. But ssh not introduced until the next lab!
-
-%   Now fixing PATH
-
-%   Minimal change seems to be
-
-% \begin{alltt}
-% case `tty` in
-% /dev/tty*) exec startx
-% esac
-% \end{alltt}
-% \end{note}
-
-A great deal of the lab work you will be doing over your time here
-will involve you creating text files of various kinds, often source
-files in a programming language such as \wikipedia{Java_(programming_language)}{Java}, \wikipedia{PHP}{PHP} or
-\wikipedia{C_(programming_language)}{C}, or \wikipedia{HTML}{HTML} files for use on the web. There are
-specialist tools called
-\wikipedia{Integrated_development_environment}{Integrated Development
-  Environments} or \emph{IDE}s that can be used for programming; you
-will meet these later in your programme. However, for many purposes,
-the simplest, and best, tool for creating such files is a simple text
-editor. You have already met one such tool, \ttout{nano}, which is
-fine for work at the console or quick modifications of existing files,
-but for more extensive work an editor that takes advantage of X's
-graphical capabilities is more appropriate.
-
-The Linux environment in which you will be working offers many such
-editors, including the default GNOME editor \ttout{gedit}, the KDE
-editor \ttout{kate} and the grand daddy of all editors,
-\ttout{emacs}. These three are illustrated in Figures \ref{fig:gedit}
-and \ref{fig:texteditors}. They are all shown ready to edit a
-Java source file; note that they all use the fact that this is
-Java source to highlight key words within the text. When you
-have some free time, please do experiment with some of the text
-editors available and find one that you like; in the meantime you
-should probably use \ttout{gedit}.
-
-\begin{figure}
-  \centering
-\includegraphics[width=.7\textwidth]{images/gedit}
-  \caption{\ttout{gedit}}
-  \label{fig:gedit}
-\end{figure}
-
-\begin{figure}
-  \begin{minipage}[b]{.5\linewidth}
-    \centering
-    \includegraphics[width=.8\textwidth]{images/kate}
-    \subcaption{\ttout{kate}}\label{subfig:kate}
-  \end{minipage}%
-  \begin{minipage}[b]{.5\linewidth}
-    \centering
-    \includegraphics[width=.8\textwidth]{images/emacs}
-    \subcaption{\ttout{emacs}}\label{subfig:emacs}
-  \end{minipage}%
-  \caption{Other editors}  \label{fig:texteditors}
-
-\end{figure}
-
-\section{Shell environment variables}
-
-When you used the \fname{csstartx} command, you had to prefix these with their full pathname, which is \fname{/opt/teaching/bin/}. The directory
-\fname{/opt/teaching/bin} is a place where we keep lots of useful
-teaching related tools, so it would be useful if you didn't have to
-type it every time you want to use a program from there; luckily
-there's a way of doing this. When you type a command on the command
-line, the shell looks for a program of that name in a number of
-places. These places are determined by the value of a shell
-\wikipedia{Environment_variable}{environment variable} called
-\ttout{PATH}. You can see what its current value is by using the
-command
-
-\begin{ttoutenv}
-\$ echo \$PATH
-\end{ttoutenv}
-
-This will show a long list of directories, separated by colons (\ttout{:}).
-
-There are many other shell variables already set for you, they can be
-seen by running the shell command \cmnd{set}{set} (do this now). How do you stop the
-output scrolling off the screen? Most of these variables won't make
-much sense to you at the moment, but among them are \ttout{HOME},
-\ttout{PWD} and \ttout{HOSTNAME}; you can check their values using
-\cmnd{echo}{echo}. What do think their values represent?
-
-You can set the value of a shell variable at the command line, for example type:
-
-\begin{ttoutenv}
-\$ MYVAR=42
-\$ echo \$MYVAR
-\end{ttoutenv}
-
-
-Note that there should be no spaces either side of the \ttout{=} sign and that the variable's name is \ttout{MYVAR} and its value is obtained  by using \verb+$MYVAR+. If a variable is given a value on the command line in a terminal window like this its value is only available in the shell running in that window.
-
-In order to be able to start the ARCADE client by typing \ttout{arcade} rather than by using the full pathname \ttout{/opt/teaching/bin/arcade} we need to modify the \ttout{PATH} variable to include the directory \fname{/opt/teaching/bin}. We can do this on the command line by typing
-
-\begin{ttoutenv}
-\$ PATH=\$PATH:/opt/teaching/bin
-\end{ttoutenv}
-
-This can be read (and you will see this over and over again in
-programming languages) as 'find the value of the right hand side of
-the \ttout{=} and give (or \concept{assign}) that value to the variable on the left hand side'. So this takes the current value of \ttout{PATH} and adds
-\ttout{:/opt/teaching/bin} on the end. After you've done this you can
-type \ttout{arcade} in your terminal window and the ARCADE client
-should start. Just exit it cleanly and return to the shell.
-
-% \begin{note}
-%   Background jobs? Where do these go? desktop2? Yes.
-% \end{note}
-
-If you now start another terminal window and type \ttout{arcade}, what happens and why?
-
-The way to make the change permanent is to modify your
-\fname{.bash\_profile} file. While we are doing this we will also add two more
-useful directories to our PATH, namely \fname{/opt/common/bin} and \fname{/opt/scripts},
-which are also shared directories containing useful local stuff.
-
-Use \ttout{gedit} to modify  \fname{.bash\_profile} by adding the following line \emph{immediately \textbf{before} the existing line starting with \ttout{PATH}}.
-
-\begin{ttoutenv}
-PATH=\$PATH:/opt/teaching/bin:/opt/common/bin:/opt/scripts
-\end{ttoutenv}
-
-
-This won't have any effect until you logout and login again. So do that now and try starting \ttout{arcade}. Run \ttout{echo \$PATH} and you will see the new value, which contains  your own \ttout{bin} directory, now preceded by the three \ttout{/opt} directories.
-
 
 \section{Configuring Thunderbird}
 
@@ -758,6 +616,149 @@ Follow all three steps in the process described in this document.
 % \end{figure}
 
 Once your Inbox appears in Thunderbird, using it to compose and send email should be fairly self-explanatory, but if you're stuck there are plenty of Thunderbird tutorials available on the web.
+
+\begin{firstonly}
+\section{ARCADE}
+
+We would now like you to register your access to the ARCADE server. ARCADE is the laboratory management system we use to administer coursework marks and deadlines, etc. You can use the client query program to look up your details, laboratory timetables, marks, and so on, throughout the year. It is recommended you do this fairly regularly, if only to check that mistakes have not been made in your marks! You need to register with ARCADE before any of your lab work can be submitted, so it is much better to do it now than wait until your first deadline!
+
+In a terminal window, run the command \ttout{/opt/teaching/bin/arcade}; after a short pause, a new window will pop up. In the large text box you should find a message telling you that you are not yet authenticated, and that you have just been sent an email. If this is so, then quit the program, use Thunderbird to read the email you have just been sent by the ARCADE server, and carefully follow the instructions in it. Now start the ARCADE Query client again, and it should now connect you to the server. If this works, then your access is set up; if it doesn't then check you've followed the instructions precisely. If it still doesn't work then, as always, ask for help; \emph{it is very important that this registration process is completed.}
+
+Explore the various queries of the client, and familiarise yourself with the the user interface. Check that your registration details are correct. Feel free to ask for explanation if it is not obvious to you.
+  
+\end{firstonly}
+
+\section{Text Editors}
+
+% \begin{note}
+%   Need something for them to do here with editor. Idea was to fix .bash profile to prevent the problem when using ssh. But ssh not introduced until the next lab!
+
+%   Now fixing PATH
+
+%   Minimal change seems to be
+
+% \begin{alltt}
+% case `tty` in
+% /dev/tty*) exec startx
+% esac
+% \end{alltt}
+% \end{note}
+
+A great deal of the lab work you will be doing over your time here
+will involve you creating text files of various kinds, often source
+files in a programming language such as \wikipedia{Java_(programming_language)}{Java}, \wikipedia{PHP}{PHP} or
+\wikipedia{C_(programming_language)}{C}, or \wikipedia{HTML}{HTML} files for use on the web. There are
+specialist tools called
+\wikipedia{Integrated_development_environment}{Integrated Development
+  Environments} or \emph{IDE}s that can be used for programming; you
+will meet these later in your programme. However, for many purposes,
+the simplest, and best, tool for creating such files is a simple text
+editor. You have already met one such tool, \ttout{nano}, which is
+fine for work at the console or quick modifications of existing files,
+but for more extensive work an editor that takes advantage of X's
+graphical capabilities is more appropriate.
+
+The Linux environment in which you will be working offers many such
+editors, including the default GNOME editor \ttout{gedit}, the KDE
+editor \ttout{kate} and the grand-daddy of all editors,
+\ttout{emacs}. These three are illustrated in Figures \ref{fig:gedit}
+and \ref{fig:texteditors}. They are all shown ready to edit a
+Java source file; note that they all use the fact that this is
+Java source to highlight key words within the text. When you
+have some free time, please do experiment with some of the text
+editors available and find one that you like; in the meantime you
+should probably use \ttout{gedit}.
+
+\begin{figure}
+  \centering
+\includegraphics[width=.7\textwidth]{images/gedit}
+  \caption{\ttout{gedit}}
+  \label{fig:gedit}
+\end{figure}
+
+\begin{figure}
+  \begin{minipage}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{images/kate}
+    \subcaption{\ttout{kate}}\label{subfig:kate}
+  \end{minipage}%
+  \begin{minipage}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{images/emacs}
+    \subcaption{\ttout{emacs}}\label{subfig:emacs}
+  \end{minipage}%
+  \caption{Other editors}  \label{fig:texteditors}
+
+\end{figure}
+
+\section{Shell environment variables}
+
+When you used the \fname{csstartx} command, you had to prefix these with their full pathname, which is \fname{/opt/teaching/bin/}. The directory
+\fname{/opt/teaching/bin} is a place where we keep lots of useful
+teaching related tools, so it would be useful if you didn't have to
+type it every time you want to use a program from there; luckily
+there's a way of doing this. When you type a command on the command
+line, the shell looks for a program of that name in a number of
+places. These places are determined by the value of a shell
+\wikipedia{Environment_variable}{environment variable} called
+\ttout{PATH}. You can see what its current value is by using the
+command
+
+\begin{ttoutenv}
+\$ echo \$PATH
+\end{ttoutenv}
+
+This will show a long list of directories, separated by colons (\ttout{:}).
+
+There are many other shell variables already set for you. They can be
+seen by running the shell command \cmnd{set}{set} (do this now). How do you stop the
+output scrolling off the screen? Most of these variables won't make
+much sense to you at the moment, but among them are \ttout{HOME},
+\ttout{PWD} and \ttout{HOSTNAME}; you can check their values using
+\cmnd{echo}{echo}. What do think their values represent?
+
+You can set the value of a shell variable at the command line, for example type:
+
+\begin{ttoutenv}
+\$ MYVAR=42
+\$ echo \$MYVAR
+\end{ttoutenv}
+
+
+Note that there should be no spaces either side of the \ttout{=} sign and that the variable's name is \ttout{MYVAR} and its value is obtained  by using \verb+$MYVAR+. If a variable is given a value on the command line in a terminal window like this its value is only available in the shell running in that window.
+
+In order to be able to start the ARCADE client by typing \ttout{arcade} rather than by using the full pathname \ttout{/opt/teaching/bin/arcade} we need to modify the \ttout{PATH} variable to include the directory \fname{/opt/teaching/bin}. We can do this on the command line by typing
+
+\begin{ttoutenv}
+\$ PATH=\$PATH:/opt/teaching/bin
+\end{ttoutenv}
+
+This can be read (and you will see this over and over again in
+programming languages) as 'find the value of the right hand side of
+the \ttout{=} and give (or \concept{assign}) that value to the variable on the left hand side'. So this takes the current value of \ttout{PATH} and adds
+\ttout{:/opt/teaching/bin} on the end. After you've done this you can
+type \ttout{arcade} in your terminal window and the ARCADE client
+should start. Just exit it cleanly and return to the shell.
+
+% \begin{note}
+%   Background jobs? Where do these go? desktop2? Yes.
+% \end{note}
+
+If you now start another terminal window and type \ttout{arcade}, what happens and why?
+
+The way to make the change permanent is to modify your
+\fname{.bash\_profile} file. While we are doing this we will also add two more
+useful directories to our PATH, namely \fname{/opt/common/bin} and \fname{/opt/scripts},
+which are also shared directories containing useful local stuff.
+
+Use \ttout{gedit} to modify  \fname{.bash\_profile} by adding the following line \emph{immediately \textbf{before} the existing line starting with \ttout{PATH}}.
+
+\begin{ttoutenv}
+PATH=\$PATH:/opt/teaching/bin:/opt/common/bin:/opt/scripts
+\end{ttoutenv}
+
+
+This won't have any effect until you logout and login again. So do that now and try starting \ttout{arcade}. Run \ttout{echo \$PATH} and you will see the new value, which contains  your own \ttout{bin} directory, now preceded by the three \ttout{/opt} directories.
 
 \begin{firstonly}
   

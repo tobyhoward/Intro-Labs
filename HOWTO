@@ -66,4 +66,19 @@ per year to set the date. Otherwise to build the PGT doc type
 
 and pgt-intro.pdf is made.
 
+Copying files to the Web (toby 030918)
+--------------------------------------
+
+The PDFs are visible at:
+
+syllabus.cs.manchester.ac.uk/ugt/2018/COMP10120/labscripts/
+
+index.html doesn't need changing if the filenames don't change.
+
+To put files here, use the "publish" script, which copies *pdf to
+
+  babbage:/www/virtualHosts/studentnet/ugt/2018/COMP10120/labscripts
+
+$ ./publish
+
 [ends]

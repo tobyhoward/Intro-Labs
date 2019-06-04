@@ -104,12 +104,7 @@ If your PC is currently in Linux, showing a black screen with a login prompt,  y
 this, press \ttout{ctrl}, \ttout{alt} and \ttout{delete}.
 
 This will probably cause strange messages to appear on the screen,
-disappear, and be replaced by yet more strange messages. Now look at
-Figure~\ref{figure:welc-grub}: when you see something like that on the
-screen press \ttout{space} you will need to respond. Meanwhile, be
-patient, watch it all happen, and don't worry what it all means.
-
-After a while,
+disappear, and be replaced by yet more strange messages.  After a while,
 everything should settle down and the screen will look like
 Figure~\ref{figure:welc-grub}; press \ttout{space} now!
 
@@ -138,17 +133,25 @@ welcome screen will appear, as shown in Figure~\ref{figure:welc-screen}. Now use
 \label{figure:login-screen}
 \end{figure}
 
-To log in to your personal account, type in your username (this is an
-8-character name usually starting with an `m' that you were given at registration). Your password will
-be the one  you set at registration. If your password doesn't work, or if you've forgotten it,
-you need to fix this urgently. You can login on a machine running Windows,  with the username \ttout{register} and password \ttout{register}, then follow the instructions.
+\cbstart
+To log in to your personal account, type in your username (the
+8-character one with letters and numbers, like x12345zz, that you were
+given at registration). 
+\cbend
+Your password will be the one you set at
+registration. If your password doesn't work, or if you've forgotten
+it, you need to fix this urgently. You can login on a machine running
+Windows, with the username \ttout{register} and password
+\ttout{register}, then follow the instructions.
 
 If you forget your password later on, you can also use one of the following methods:
 \begin{itemize}
 \item If you have access to a web browser, use the password recovery page at\\ \url{https://iam.manchester.ac.uk/recover}
 %\item Visit the \verb|it.changes| Helpdesk in Kilburn Lower First area (Welcome Week, 09:00 -- 17:00)
-\item You can also contact the University IT helpdesk (opening hours are Monday to Friday 09:00 -- to 17:00) by phone on 0161 306 5544, or dial 65544 from a University internal phone; or you can visit a helpdesk either on the ground floor of the Kilburn Building (Room G-96), in the Main Library (Building 55 on
+\cbstart
+\item You can also contact the University IT helpdesk (opening hours are Monday to Friday 09:00 -- to 17:00) by phone on 0161 306 5544, or dial 65544 from a University internal phone; or you can visit a helpdesk either on the ground floor of the Kilburn Building, in the Main Library (Building 55 on
 the Campus Map), or in the Alan Gilbert Learning Commons (building 63).
+\cbend
 \item Remember, if you need help, ask!
 \end{itemize}
 
@@ -176,19 +179,23 @@ looking something like Figure~\ref{figure:welc-mail365}.
 Have a look around for a few minutes and check what mail you've
 got. In particular, look for one with `The Monday Mail' in the
 Subject line. This is an important mail you'll receive every Monday
-(hence the name) throughout your 3 or 4 years with us in the
-School which  tells you what's going on each week. Take a moment to read it now. You can always read the Monday Mail, by the way, at the archive located at\\  \urlnop{studentnet.cs.manchester.ac.uk/ugt/mondaymail/}
+(hence the name) throughout your years with us in the
+School which  tells you what's going on each week. Take a moment to
+read it now. You can always read the Monday Mail, by the way, at the
+archive located at
+
+\urlnop{studentnet.cs.manchester.ac.uk/ugt/mondaymail/}
   
 \end{firstonly}
 
 \begin{figure}
-\centerline{\includegraphics[width=15cm]{images/myManchester-AY17.png}}
+\centerline{\includegraphics[width=15cm]{images/myManchester-AY18.png}}
 \caption{Your My Manchester page.}
 \label{figure:welc-mymanchester}
 \end{figure}
 
 \begin{figure}
-\centerline{\includegraphics[width=15cm]{images/Office365-AY17}}
+\centerline{\includegraphics[width=15cm]{images/outlook-screen-AY18.png}}
 \caption{Your Office 365 email.}
 \label{figure:welc-mail365}
 \end{figure}
@@ -200,7 +207,7 @@ Office 365, like most modern email systems, supports the IMAP protocol
 run an IMAP mail client. Some examples of such clients are: Mozilla
 Thunderbird, Mac Mail, Outlook and mail apps on mobile devices. No
 matter what client you use, you need to tell it the appropriate
-settings. The mechanism for finding these setting can be found in our
+settings. The mechanism for finding these settings can be found in our
 CS student IT wiki, which is located on the web at
 \urlnop{wiki.cs.manchester.ac.uk/index.php/StudentFAQ/IT}. Look for
 the answer to the question 'How do I configure my favourite IMAP mail
@@ -222,7 +229,8 @@ You should also write this IMAP and mail server information down somewhere you c
 
 Finally, if you use an IMAP mail client on your phone or mobile
 device, you can configure it to use the settings you've just found, and check
-that you can read and send email successfully. It's probably best to try this later as the mobile signal in the lab is not good.
+that you can read and send email successfully. It's probably best to
+try this later as the mobile signal in the lab may not be good.
 
 That's all on Windows for now, but of course  you're free to boot an available PC into Windows  and use it at any time unless you are in a lab that requires the use of Linux.
 
@@ -267,7 +275,19 @@ The most remarkable thing about the Pi is that, although it's not the most power
 The Raspberry Pi itself is just the circuit board shown in Figure~\ref{figure:bare-rpi}. Your kit contains a Pi together with a case, SD card and power supply. If you want to replace the case with one in a different style you're welcome to do so (there are plenty available to buy online, and lots of people have made their own unique ones just for the fun of it). The Pi is reasonably robust, and you can use it without a case, but obviously it's a bit more vulnerable if it's not in a box of some sort. Figure \ref{figure:bare-rpi-underside} shows the Pi's circuit board from beneath, indicating where the micro SD card gets inserted.
 
 \begin{rpi}{Why is it called a Pi?}
-  The Raspberry Pi apparently got its name because (a) lots of other computer systems have been named after fruit (you'll know of Apple and Blackberry, but in the past there has also been at least Apricot and Tangerine), and (b) the \wikipedia{Python_(programming_language)}{Python language} was one of the first things ported to run on it. The logo was created by Paul Beech, and is based on \wikipedia{Buckminsterfullerene}{Buckminsterfullerene}, a spherical fullerene molecule more commonly called a Buckyball. Its designer pointed out that a full buckyball has 32 faces, but that only 11 are visible in the 2D logo; and that the Raspberry Pi has a 32-bit processor and an ARM11 on board.
+  The Raspberry Pi apparently got its name because (a) lots of other
+  computer systems have been named after fruit (you'll know of Apple
+  and perhaps Blackberry, but in the past there has also been at least
+  Apricot and Tangerine), and (b) the
+  \wikipedia{Python_(programming_language)}{Python language} was one
+  of the first things ported to run on it. The logo was created by
+  Paul Beech, and is based on
+  \wikipedia{Buckminsterfullerene}{Buckminsterfullerene}, a spherical
+  fullerene molecule more commonly called a Buckyball. Its designer
+  pointed out that a full buckyball has 32 faces, but that only 11 are
+  visible in the 2D logo; and that the original Raspberry Pi had a
+  32-bit processor and an ARM11 on board. The Pi3 Model B+ has a
+  1.4GHz 64-bit ARM quad-core Cortex-A53 processor.)
 
 The ARM processor, on which the Pi and the vast majority of the world's other mobile devices are based, was originally designed by a team led by \wikipedia{Steve_Furber}{Steve Furber}, who is a Professor in this School.
 \end{rpi}
@@ -276,12 +296,12 @@ The ARM processor, on which the Pi and the vast majority of the world's other mo
 \label{sec:connecting-pi}
 
 \begin{figure}
-\centerline{\includegraphics[width=15cm]{images/pi3top}}
+\centerline{\includegraphics[width=15cm]{images/pi3-top-labelled.png}}
 \caption{An uncased Raspberry Pi 3. The numbered connectors are \protect\circled{1} HDMI output,  \protect\circled{2} four USB ports,  \protect\circled{3} micro-USB power input,  \protect\circled{4} stereo audio out,  \protect\circled{5} General Purpose Input/Output (GPIO),  \protect\circled{6} Ethernet.}\label{figure:bare-rpi}
 \end{figure}
 
 \begin{figure}
-\centerline{\includegraphics[width=15cm]{images/pi3bot.jpg}}
+\centerline{\includegraphics[width=15cm]{images/pi3-bot-labelled.png}}
 \caption{A Raspberry Pi 3 from below. The ports are numbered as in Figure~\ref{figure:bare-rpi}, and \protect\circled{7} shows the location of the micro SD (Secure Digital) memory card slot, and the correct orientation of the card to insert into the Pi. The card is shown much larger than it is!}\label{figure:bare-rpi-underside}
 \end{figure}
 
@@ -294,7 +314,7 @@ It's important that you connect the Pi up in exactly the order specified here---
 
 \begin{itemize}
 \item The monitors in the LF31 Lab are all fitted with an extra video lead for connecting up the Pis. We try to standardise on blue cables for connecting to a Pi. Locate the HDMI lead (labelled \protect\circled{1} in Figure \ref{figure:cables}), and plug this into the socket marked \circled{1} on Figure~\ref{figure:bare-rpi}.
-\item Next we'll need to connect a keyboard and mouse. Identify the male and female USB connectors marked \protect\circled{2} on Figure \ref{figure:cables}, and note that there is a red dot on each. Separate the two connectors and plug the male end into one of the USB sockets (it doesn't matter which) on your Pi (marked with \protect\circled{2} on the Figure~\ref{figure:bare-rpi}). Later, when you've finished this lab (and every other time you connect your Pi) please make sure to reconnect the male and female connectors to the PC as a courtesy to the next user. When you reconnect, be sure to align the two dots marked on the male and female connectors, to prevent you forcing them together the wrong way round and damaging them.
+\item Next we'll need to connect a keyboard and mouse. Identify the male and female USB connectors marked \protect\circled{2} on Figure \ref{figure:cables}, and note that there is a red dot on each. Separate the two connectors and plug the male end into one of the USB sockets (it doesn't matter which) on your Pi (marked with \protect\circled{2} on Figure~\ref{figure:bare-rpi}). Later, when you've finished this lab (and every other time you connect your Pi) please make sure to reconnect the male and female connectors to the PC as a courtesy to the next user. When you reconnect, be sure to align the two dots marked on the male and female connectors, to prevent you forcing them together the wrong way round and damaging them.
 \item \textbf{Do not connect the power or network connectors at this stage!}
 \end{itemize}
 
@@ -322,12 +342,29 @@ Now you're ready to power up the Pi. Plug your Pi power supply into the 'toblero
 %Like most other computers, the Pi doesn't like having its power removed without being shut down properly. Although you might get away with it, there's a reasonable chance of messing up the operating system if you remove the power while the Pi is in the middle of doing something. And because the Pi runs a multi-tasking operating system, it's almost always `doing something', so pulling the power out unexpectedly is always a bad idea. You're unlikely to damage the Pi's hardware like this, but you may find that you lose work, and may have to reinstall the operating system. For instructions on how to shut the Pi down safely, see Section \ref{section:shutdown}.
 %\end{danger}
 
-You should see a black screen with white text scrolling up the screen as the Pi boots. When things settle down and the screen looks like Figure~\ref{figure:lxde-gui} you're ready for the next task. 
-
 \begin{figure}
 \centerline{\includegraphics[width=14cm]{images/pi3-LXDE-AY17.png}}
 \caption{The Pi's default graphical user interface -- a window manager called LXDE.}\label{figure:lxde-gui}
 \end{figure}
+
+\cbstart
+You should first see a big square of colours, and then a number of
+different things on the screen. Wait until things settle down and the
+screen looks like Figure~\ref{figure:lxde-gui}, then you're ready to
+carry on.
+\cbend
+
+\begin{figure}
+\centerline{\includegraphics[width=14cm]{images/BeforeYouStart-corrected.jpg}}
+\caption{A welcome screen you may or may not see. If you do see it,
+  click Cancel. {\bf Do not click Next.}}\label{BeforeYouStart}
+\end{figure}
+ 
+\cbstart
+If you see a prompt box as shown in Figure~\ref{BeforeYouStart}, click
+\verb+Cancel+. Do not click \verb+Next+. You are going to do the
+setting-up yourself, later. If this prompt box didn't appear, no problem.
+\cbend
 
 %When the boot process finishes for the first time (it will take somewhere
 %about 20--30 seconds), if all has gone well you should see the NOOBS (New Out Of Box)
@@ -443,10 +480,12 @@ As an aside, you may want to consider this: if you need a text editor to write p
 Now it's time to change your password. This is very important, because
 shortly you'll connect to a network, and it's not safe to do that
 while your Pi still has its default password set.  On the screen you
-will see a panel of tool icons on the top left. Click on the icon that
-looks like a monitor screen. This runs a command line terminal that
+will see a panel of tool icons on the top left. 
+\cbstart Click on the icon that
+looks like a black square with the symbols \verb+>_+ in it. This runs a command line terminal that
 you can enter commands in. Don't worry at this stage exactly what the
 commands mean. Type:
+\cbend
 
 \begin{ttoutenv}
 sudo raspi-config
@@ -455,7 +494,7 @@ sudo raspi-config
 followed by the Return key. This will bring up the Pi configuration screen, as shown in Figure~\ref{figure:raspi-config}.
 
 \begin{figure}
-\centerline{\includegraphics[width=13cm]{images/raspi-config.png}}
+\centerline{\includegraphics[width=13cm]{images/2018-07-09-170742_1920x1200_scrot.png}}
 \caption{The Raspberry Pi config tool. The highlight bar can be moved between the different controls using the Tab key, or up and down in the menu using the arrow keys.}\label{figure:raspi-config}
 \end{figure}
 
@@ -483,10 +522,11 @@ Although the Pi uses a fairly standard Unix operating system, it's probably not 
 \end{danger}
 
 \subsection{Network Registration}
+\label{sec:netreg}
 
 For security, the School has created a secure private Raspberry Pi
 network, which is separated from the main University network and the
-internet, so you won't be able to access the world outside the Pi
+Internet, so you won't be able to access the world outside the Pi
 network until you register your Pi. Now that your Pi password isn't
 the same as the `out of the box' Pi one, it's safe to plug your Pi
 into the network. Locate the blue ethernet cable poking out of the
@@ -497,15 +537,18 @@ page~\pageref{figure:bare-rpi}). Click the globe icon in the panel at
 the upper left of the screen. The Chromium web browser should
 appear. Type \verb+google.co.uk+ into the address bar and press enter,
 you should be redirected to the registration page shown in
-Figure~\ref{figure:netreg}. Enter your University username (the
-8-character one starting `m') and your University password. If the
-browser asks if you want to save the password, click \verb+never+.
+Figure~\ref{figure:netreg}. 
+\cbstart Enter your University username (the
+8-character one with letters and numbers, like x12345zz) and your
+University password. 
+\cbend 
+If the browser asks if you want to save the
+password, click \verb+never+.
 
 If you register successfully, the next page will ask you to shutdown
 your Pi. To do that, click the top-left raspberry icon and on the
 drop-down select \verb+Shutdown+, and on the pop-up pane that appears, select \verb+Shutdown+.
-Lots of cryptic messages will scroll
-down the screen, and the Pi will shutdown, leaving just the red LED lit.
+The Pi will shutdown, leaving just the red LED lit.
 
 Now you need to wait for two minutes, for the network registration to
 take effect. So have a two-minute break, and read a bit about Unix, further in this document.
@@ -523,16 +566,19 @@ check that you can reach \verb+www.cs.manchester.ac.uk+. If not, ask for help.
 \end{figure}
 
 \subsection{Date and time}
+\label{sec:update1}
 
 The Pi has an internal clock, which can be set automatically by
 syncing it to an Internet time server using the
 \wikipedia{Network_Time_Protocol}{Network Time Protocol (NTP)}. This
 behaviour isn't enabled by default, so we need to switch it on.
 
+\cbstart 
 As you did before, from the panel of tool icons on the top left of the
-screen, click on the icon that looks like a monitor screen to open a
+screen, click on the \verb+>_+ icon to open the
 command line terminal. Issue the following two commands, typing the
 Return key after each one.
+\cbend 
 
 \begin{ttoutenv}
 sudo timedatectl set-timezone "Europe/London"
@@ -546,15 +592,45 @@ verify the time and date are now correct:
 date
 \end{ttoutenv}
 
+\cbstart 
+\subsection{Updating your Pi}
+\label{sec:update2}
+We now need to make sure your Pi is up-to-date. To do this, issue
+the following command:
+
+\begin{ttoutenv}
+sudo rpi-update
+\end{ttoutenv}
+
+You should see some messages showing that a server has been contacted
+and updates downloaded and installed. When this process has completed
+(it should take 2 or 3 minutes) then issue the following command,
+which updates the mechanism we'll use later for installing software
+on your Pi:
+
+\begin{ttoutenv}
+sudo apt-get update
+\end{ttoutenv}
+
+Now reboot your Pi so these updates can take effect:
+
+\begin{ttoutenv}
+sudo reboot
+\end{ttoutenv}
+
+and when your Pi is back, login again.
+\cbend
+
 \subsection{Disabling the user interface}
+\label{sec:update3}
 
 As you've seen, the Pi automatically starts a graphical user
 interface; as we need to be more flexible, we will disable this
 behaviour. Once this is done your Pi will subsequently start with a
 simple command line prompt.
 
-In the terminal window where you started the clock syncing, bring up
-the Pi configuration screen again by typing
+Once again open a terminal window and bring up the Pi configuration
+screen by typing:
 
 \begin{ttoutenv}
 sudo raspi-config
@@ -564,14 +640,16 @@ and when the configuration screen appears, use the arrow keys to
 select `Boot Options', then press Tab until \verb+<Select>+ is
 highlighted, then press Return. This will bring up another
 configuration screen. This time use the arrow keys to select the
-option `Text console, requiring user to login'. Again use Tab until
-\verb+<OK>+ is highlighted, then press Return. At the next screen tab
-to \verb+finish+ and press Return. The next screen will say `Would you
+option `B1 Desktop / CLI'. Again use Tab until \verb+<Select>+ is
+highlighted, then press Return. A new screen appears. Select `B1
+Console. Text console, requiring user to log in'. Tab to \verb+<Ok>+
+and press Return. This takes you back to the previous screen. Now tab to
+\verb+<Finish>+ and press Return. The next screen will say `Would you
 like to reboot now?'. Tab to \verb+<No>+ and press Return.
 
 \subsection{Finishing off}
 
-You should now be back in the command line Terminal, where you can stop the Pi by typing
+You should now be back in the command line terminal, where you can stop the Pi by typing
 %$
 
 \begin{ttoutenv}
@@ -624,7 +702,7 @@ software that makes computer hardware usable; it makes the `raw
 computing power' of the hardware available to the user. You're
 probably most familiar with
 the \wikipedia{Microsoft_windows}{Microsoft Windows} and
-Apple \wikipedia{OS_X}{OS X} families of operating systems for
+Apple \wikipedia{macOS}{macOS} families of operating systems for
 `desktop' computers, and \wikipedia{Ios}{iOS} (Apple, again) and
 Google's \wikipedia{Android_(operating_system)}{Android} for mobile
 devices; but many other more specialist operating systems exist, and
@@ -678,8 +756,19 @@ pioneers of the past!
 %{\jargonFileHackers}'.)
 %\end{htmlonly}
 
-Even though Unix is now quite old, most Computer Scientists recognise that the designers of Unix got most of the fundamental concepts and
-architecture right. Given how much computing has changed since the 1960s, this was an astonishing intellectual achievement. Although Microsoft's \wikipedia{Microsoft_Windows}{Windows} is by far the most common operating system on \emph{desktop} machines, the majority of the Internet, much of the world's corporate infrastructure, virtually all supercomputers, and even some mobile devices are powered by Unix-like operating systems. So, while the polished graphical user interfaces of Windows and \wikipedia{OS_X}{OS X} appear to dominate the world of computing, most of the real hard-core and leading-edge computation relies on an elegant operating system designed nearly 50 years ago (by a team of scientists who wanted to play a game).
+Even though Unix is now quite old, most Computer Scientists recognise
+that the designers of Unix got most of the fundamental concepts and
+architecture right. Given how much computing has changed since the
+1960s, this was an astonishing intellectual achievement. Although
+Microsoft's \wikipedia{Microsoft_Windows}{Windows} is by far the most
+common operating system on \emph{desktop} machines, the majority of
+the Internet, much of the world's corporate infrastructure, virtually
+all supercomputers, and some mobile devices are powered by Unix-like
+operating systems. So, while the polished graphical user interfaces of
+Windows and \wikipedia{macOS}{macOS} appear to dominate the world of
+computing, most of the real hard-core and leading-edge computation
+relies on an elegant operating system designed nearly 50 years ago (by
+a team of scientists who wanted to play a game).
 
 \subsection{Modern Unix Variants}
 \label{sec:modern-unix-variants}
@@ -699,27 +788,25 @@ Although many of the branches represent interesting innovations of one
 kind or another, there are perhaps two that deserve particular
 attention. The first of these was the decision by Apple some time
 around the turn of the millennium to drop their own---highly popular,
-but ageing---bespoke operating system (unimaginatively called
-\wikipedia{Mac_os_9}{Mac OS 9}) in favour of a Unix-based system (now
-the more familiar `OS X', where `X' is both the Roman numeral `10' and
-a nod in the direction of the uniX nature of the OS). Although the
-majority of Mac users are blissfully unaware of the fact, behind the
-slick front-end of OS X, sits a variant of Unix. The second, and
-perhaps more profound of these events was the creation in 1991 by
-Swedish programmer \wikipedia{Linus_torvalds}{Linus Torvalds} of a
-Unix-like system, the source code to which \emph{he gave away for
-  free}\footnote{`free' here in the sense both of `freedom to reuse or
-  adapt', and also in the sense of `without charge'.}; this became
-known as the \wikipedia{Linux_kernel}{Linux Kernel}. Combined with
-other free software created by the
-\wikipedia{Free_software_foundation}{Free Software Foundation}, a
-non-commercial version of Unix called \wikipedia{GNU/Linux}{GNU/Linux}
-was born (GNU here is a recursive acronym for ``GNU's not Unix'', a
-swipe at other commercial non-Free versions; much to the annoyance of
-the Free Software Foundation, GNU/Linux is almost always called just
-`Linux'\footnote{Linux is pronounced ``Linn-ucks'', despite the fact
-  the name was coined by its creator, and his name `Linus' is
-  pronounced ``Leen-uss''!}.)
+but ageing---bespoke operating system (\wikipedia{Mac_os_9}{Mac OS 9})
+in favour of a Unix-based system (now the more familiar
+`macOS'. Although the majority of Mac users are blissfully unaware of
+the fact, behind the slick front-end of macOS sits a variant of
+Unix). The second, and perhaps more profound of these events was the
+creation in 1991 by Swedish programmer
+\wikipedia{Linus_torvalds}{Linus Torvalds} of a Unix-like system, the
+source code to which \emph{he gave away for free}\footnote{`free' here
+  in the sense both of `freedom to reuse or adapt', and also in the
+  sense of `without charge'.}; this became known as the
+\wikipedia{Linux_kernel}{Linux Kernel}. Combined with other free
+software created by the \wikipedia{Free_software_foundation}{Free
+  Software Foundation}, a non-commercial version of Unix called
+\wikipedia{GNU/Linux}{GNU/Linux} was born (GNU here is a recursive
+acronym for ``GNU's not Unix'', a swipe at other commercial non-Free
+versions; much to the annoyance of the Free Software Foundation,
+GNU/Linux is almost always called just `Linux'\footnote{Linux is
+  pronounced ``Linn-ucks'', despite the fact the name was coined by
+  its creator, and his name `Linus' is pronounced ``Leen-uss''!}.)
 
 Linux has been, and continues to be, developed cooperatively by
 thousands of programmers across the world contributing their effort

@@ -1,10 +1,10 @@
-#
 # mutt configuration
 #
 # Change the following three lines to match your
 # University of Manchester account details
 set my_user_name="firstname.secondname@student.manchester.ac.uk"
-set my_imap_server_name=[SERVERNAME].outlook.com
+# Sept'18, use line below # set my_imap_server_name=[SERVERNAME].outlook.com
+set my_imap_server_name= outlook.office365.com
 set realname = "Real Name"
 
 # Change the following line to a different editor if you prefer. 
